@@ -1,0 +1,111 @@
+/* add custom styles */
+@font-face {
+    font-family: 'polya_regularregular';
+    src: url('../fonts/polya-webfont.eot');
+    src: url('../fonts/polya-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/polya-webfont.woff2') format('woff2'),
+         url('../fonts/polya-webfont.woff') format('woff'),
+         url('../fonts/polya-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Bd';
+    src: url('../fonts/HelveticaNeueLTStd-Bd.eot');
+    src: url('../fonts/HelveticaNeueLTStd-Bd.eot') format('embedded-opentype'),
+         url('../fonts/HelveticaNeueLTStd-Bd.woff2') format('woff2'),
+         url('../fonts/HelveticaNeueLTStd-Bd.woff') format('woff'),
+         url('../fonts/HelveticaNeueLTStd-Bd.ttf') format('truetype'),
+         url('../fonts/HelveticaNeueLTStd-Bd.svg#Conv_HelveticaNeueLTStd-Bd') format('svg');
+}
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Roman';
+    src: url('../fonts/HelveticaNeueLTStd-Roman.eot');
+    src: url('../fonts/HelveticaNeueLTStd-Roman.eot') format('embedded-opentype'),
+         url('../fonts/HelveticaNeueLTStd-Roman.woff2') format('woff2'),
+         url('../fonts/HelveticaNeueLTStd-Roman.woff') format('woff'),
+         url('../fonts/HelveticaNeueLTStd-Roman.ttf') format('truetype'),
+         url('../fonts/HelveticaNeueLTStd-Roman.svg#HelveticaNeueLTStd-Roman') format('svg');
+}
+@font-face {
+    font-family: 'Gotham-UltraItalic';
+    src: url('../fonts/Gotham-UltraItalic.eot');
+    src: url('../fonts/Gotham-UltraItalic.eot') format('embedded-opentype'),
+         url('../fonts/Gotham-UltraItalic.woff2') format('woff2'),
+         url('../fonts/Gotham-UltraItalic.woff') format('woff'),
+         url('../fonts/Gotham-UltraItalic.ttf') format('truetype'),
+         url('../fonts/Gotham-UltraItalic.svg#Gotham-UltraItalic') format('svg');
+}
+
+.navbar {
+    border-radius: 0;
+    border-bottom-color: #f90c97;
+    background-color: white;
+    font-family:  'HelveticaNeueLTStd-Bd';
+    min-height: 70px;
+}
+.navbar-nav > li > a {
+    line-height: 40px;
+}
+
+.navbar-default .navbar-brand {
+    color: #f90c97;
+}
+.navbar-brand {
+    font-family: 'polya_regularregular';
+    float: left;
+    height: 70px;
+    padding: 25px 15px 0 15px;
+    font-size: 40px;
+    line-height: 20px;
+    background-color: white;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #f90c97;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: white;
+    background-color: #f90c97;
+}
+
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: white;
+    background-color: #f90c97;}
+
+#blurb {
+    background-color: #f90c97;
+    color: white;
+    font-size: 12px;
+    width: 600px;
+    height: 70px;
+}
+#blurb, p {
+    padding: 5px;
+    line-height: 2;
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+    color: white;
+    background-color: #f90c97;
+}
+
+.dropdown-menu {
+        border-color: #f90c97;
+    box-shadow: none;
+}
+
+.dropdown-menu>li>a {
+    color: #f90c97;
+    background-color: white;
+}
+
+.dropdown-menu>li>a:hover{
+    color: white;
+    background-color: #f90c97;
+}

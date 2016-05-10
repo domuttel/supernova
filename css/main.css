@@ -37,16 +37,16 @@
          url('../fonts/Gotham-UltraItalic.ttf') format('truetype'),
          url('../fonts/Gotham-UltraItalic.svg#Gotham-UltraItalic') format('svg');
 }
-
+/* NAVBAR */
 .navbar {
     border-radius: 0;
     border-bottom-color: #f90c97;
     background-color: white;
     font-family:  'HelveticaNeueLTStd-Bd';
-    min-height: 70px;
 }
 .navbar-nav > li > a {
-    line-height: 40px;
+    line-height: 30px;
+    height: 61px;
 }
 
 .navbar-default .navbar-brand {
@@ -55,10 +55,10 @@
 .navbar-brand {
     font-family: 'polya_regularregular';
     float: left;
-    height: 70px;
+    height: 61px;
     padding: 25px 15px 0 15px;
     font-size: 40px;
-    line-height: 20px;
+    line-height: 10px;
     background-color: white;
 }
 .navbar-default .navbar-nav>li>a {
@@ -74,18 +74,40 @@
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
     color: white;
-    background-color: #f90c97;}
-
+    background-color: #f90c97;
+}
+@media(max-width: 1154px){
+    #blurb {
+        display: none;
+    }
+}
 #blurb {
     background-color: #f90c97;
     color: white;
-    font-size: 12px;
-    width: 600px;
-    height: 70px;
+    font-size: 13px;
+    width: 650px;
+    height: 61px;
+    text-align: center;
 }
 #blurb, p {
-    padding: 5px;
-    line-height: 2;
+    padding: 7px;
+    line-height: 1.5;
+}
+#blurb-area{
+    font-family: 'HelveticaNeueLTStd-Bd';
+    color: white;
+    text-align: center;
+    background-color: #f90c97;
+    margin-top: -20px;
+}
+#blurb-area, p{
+    font-family: 'HelveticaNeueLTStd-Bd';
+}
+@media(min-width: 1154px){
+    #blurb-area{
+        display: none;
+    }
+
 }
 
 .navbar-default .navbar-nav>.open>a,
@@ -96,7 +118,8 @@
 }
 
 .dropdown-menu {
-        border-color: #f90c97;
+    border-radius: 0;
+    border-color: #f90c97;
     box-shadow: none;
 }
 
@@ -109,3 +132,34 @@
     color: white;
     background-color: #f90c97;
 }
+.navbar-default .navbar-toggle{
+    border: none;
+    padding: 24px;
+    margin: 0 15px 0 0;
+
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color:#f90c97;
+}
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: white;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: #f90c97;
+    border-radius: 0;
+}
+.navbar-default .navbar-collapse {
+    border-color: #f90c97;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #f90c97;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus{
+    background-color: #f90c97;
+    color: white;
+}
+/* END NAVBAR */

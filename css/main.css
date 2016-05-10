@@ -48,10 +48,6 @@
     line-height: 30px;
     height: 61px;
 }
-
-.navbar-default .navbar-brand {
-    color: #f90c97;
-}
 .navbar-brand {
     font-family: 'polya_regularregular';
     float: left;
@@ -61,7 +57,7 @@
     line-height: 10px;
     background-color: white;
 }
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-brand {
     color: #f90c97;
 }
 .navbar-default .navbar-brand:hover,
@@ -69,8 +65,22 @@
     color: white;
     background-color: #f90c97;
 }
+@media(min-width: 350px){
+    .navbar-brand {
+            font-family: 'polya_regularregular';
+            float: left;
+            height: 61px;
+            /*padding: 25px 15px 0 15px;*/
+            font-size: 36px;
+            line-height: 10px;
+            background-color: white;
+    }
+}
 
 
+.navbar-default .navbar-nav>li>a {
+    color: #f90c97;
+}
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
     color: white;
@@ -132,25 +142,6 @@
     color: white;
     background-color: #f90c97;
 }
-.navbar-default .navbar-toggle{
-    border: none;
-    padding: 24px;
-    margin: 0 15px 0 0;
-
-}
-.navbar-default .navbar-toggle .icon-bar {
-    background-color:#f90c97;
-}
-.navbar-default .navbar-toggle:hover .icon-bar,
-.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: white;
-}
-
-.navbar-default .navbar-toggle:focus,
-.navbar-default .navbar-toggle:hover {
-    background-color: #f90c97;
-    border-radius: 0;
-}
 .navbar-default .navbar-collapse {
     border-color: #f90c97;
 }
@@ -163,3 +154,58 @@
     color: white;
 }
 /* END NAVBAR */
+
+.navbar-default .navbar-toggle{
+    border: none;
+    padding: 24px;
+    margin: 0 0 0 -5px;
+
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color:#f90c97;
+}
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: white;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    border-radius: 0;
+}
+/*NAVBAR ANIMATION*/
+.navbar-toggle {
+  border: none;
+  background: transparent !important;
+  margin-left: 2px;
+}
+.navbar-toggle:focus,
+.navbar-toggle:hover {
+  background: #f90c97 !important;
+}
+.navbar-toggle .icon-bar {
+  width: 22px;
+  transition: all 0.5s;
+}
+.navbar-toggle .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggle .middle-bar {
+  opacity: 0;
+}
+.navbar-toggle .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+.navbar-toggle.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggle.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+/*END NAVBAR ANIMATION*/

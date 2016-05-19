@@ -6,5 +6,12 @@ $(document).on('ready', function() {
    var blurbSm = $('<div><p>OUTDOOR FESTIVAL OF DIGITAL ANIMATION AND ART DOWNTOWN DENVER SATURDAY SEPTEMBER 24TH</p></div>');
   $(blurb).appendTo(".navbar-header");
   $(blurbSm).appendTo("#blurb-area");
+    $('.carousel').carousel({
+        interval: 3000,
+        // pause: "hover"
+    });
+    $('.dropdown').hover(function(){
+  $('.dropdown-toggle', this).trigger('click');
+});
 
 });

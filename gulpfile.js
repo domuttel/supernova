@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
-var connect = require('gulp-connect')
+var connect = require('gulp-connect');
+var uglify = require('gulp-uglify');
 
 // configure connect task
 gulp.task('connect', function() {
@@ -19,7 +20,6 @@ gulp.task('css', function () {
     .pipe(connect.reload());
 });
 
-
 // configure jshint task
 gulp.task('jshint', function() {
   return gulp.src('js/*.js')
@@ -32,6 +32,13 @@ gulp.task('watch', function() {
   gulp.watch('js/*.js', ['jshint']);
   gulp.watch(['*.html'], ['html']);
   gulp.watch(['css/*.css'], ['css']);
+});
+
+// configure minify
+gulp.task('compress', function() {
+  return gulp.src('lib/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'));
 });
 
 // default task!

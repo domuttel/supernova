@@ -260,11 +260,13 @@ fieldset[disabled] .btn.active {
 }
 .navbar-default .navbar-nav .open .dropdown-menu>li>a {
     color: #f90c97;
+    position: relative
 }
 .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
 .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus{
     background-color: #f90c97;
     color: white;
+    position: relative
 }
 /* END NAVBAR */
 
@@ -374,6 +376,9 @@ background-color: white;
 #follow-the-d > img{
 width: 85%;
 }
+#follow-the-d a:hover{
+background-color: white;
+}
 
 .page-info {
   background-color: white;
@@ -417,7 +422,7 @@ width: 85%;
   padding: 0 10px 10px 0;
 }
 .pagehead-leading{
-  margin: -5px 0 -5px 0;
+  margin: 15px 0 -8px 0;
 }
 .history-box{
   margin-bottom: 25px;
@@ -429,11 +434,10 @@ width: 85%;
   }
 }
 .history-img-overlay{
-  color: #f90c97;
-  background-color: rgba(255,255,255,.75);
-  /*text-shadow: none;*/
-  /*margin-bottom: 5px;*/
+  color: white;
+  /*background-color: rgba(255,255,255,.75);*/
 }
+
 .large-textbox-highlight{
   margin-top: 12px;
   background-color: white;
@@ -443,10 +447,12 @@ width: 85%;
 #ff-logo{
   display: none;
 }
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
-
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
   background-color: white;
-  /*border-color: #f90c97;*/
   color: #f90c97;
  }
 

@@ -10,7 +10,9 @@ $(document).on('ready', function() {
         interval: 3000,
         // pause: "hover"
     });
-  $('.dropdown').hover(function(){
+  $('.dropdown').hover(function(e){
+    e.preventDefault();
+    e.stopPropagation();
     $('.dropdown-toggle', this).trigger('click');
   });
 

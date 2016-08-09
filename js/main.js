@@ -12,4 +12,5 @@ $(document).on('ready', function() {
     $("#ff-show-hover").mouseleave(function(){
         $("#ff-logo").fadeOut();
     });
+    $('img').attr('alt', 'Copyright 2016 Denver Digerati');
 });

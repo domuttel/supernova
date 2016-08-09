@@ -22,7 +22,7 @@ gulp.task('css', function () {
 
 // configure jshint task
 gulp.task('jshint', function() {
-  return gulp.src('js/*.js')
+  return gulp.src('js/main.js')
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
 });

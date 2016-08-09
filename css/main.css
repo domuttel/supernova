@@ -371,7 +371,7 @@ color: #f90c97;
 text-align: center;
 padding-bottom: 15px;
 margin-bottom: 6px;
-background-color: white;
+/*background-color: white;*/
 }
 #follow-the-d > img{
 width: 85%;
@@ -480,4 +480,9 @@ a .jurors-highlight:hover {
   margin-right: 10px;
   /*margin:10px;*/
 }
-
+#sponsors> img {
+    padding-bottom: 2.5rem;
+}
+#sponsors> img:last-child{
+    padding-bottom: 0;
+}

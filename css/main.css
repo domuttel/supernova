@@ -30,6 +30,7 @@
 }
 
 h3{
+    font-size: 1.6rem;
   font-family: 'HelveticaNeueLTStd-Bd';
 }
 body{
@@ -335,13 +336,28 @@ fieldset[disabled] .btn.active {
   color: #f90c97;
   border: none;
   background-color: transparent;
-  margin-bottom: 15px;
+  margin: 0 -60px -30px 0;
 }
-#footer-social img{
+#footer-social > div > a{
+    font-size: 1.2rem;
+    border: 1px dotted #f90c97;
+    padding: 6px 3px 3px 3px;
+    background-color: rgba(255, 255, 255, 0.65);
+}
+#footer-social > div > a:hover, a:active, a:focus{
+    font-size: 1.2rem;
+    border: 1px dotted #f90c97;
+    padding: 6px 3px 3px 3px;
+    color: white;
+    background-color: #f90c97;
+
+    /*background-color: white;*/
+}
+/*#footer-social img{
   border: 0 solid white;
   background-color: white;
   border-radius: 6px;
-}
+}*/
 @media (max-width: 1200px) {
   #contact-the-d{
     display: none;
@@ -379,7 +395,26 @@ width: 85%;
 #follow-the-d a:hover{
 background-color: white;
 }
-
+.follow-the-d{
+width: 175px;
+border: solid 1px #f90c97;
+color: #f90c97;
+text-align: center;
+padding-bottom: 15px;
+margin-bottom: 6px;
+/*background-color: white;*/
+}
+.follow-the-d > img{
+width: 85%;
+}
+.follow-the-d a:hover{
+background-color: white;
+}
+@media (max-width: 1200px) {
+  .follow-the-d{
+    display: none;
+  }
+}
 .page-info {
   background-color: white;
   color: #f90c97;
@@ -423,6 +458,7 @@ background-color: white;
   padding: 0 10px 10px 0;
 }
 .pagehead-leading{
+    font-size: 2.4rem;
   margin: 15px 0 -8px 0;
 }
 .history-box{
@@ -485,4 +521,10 @@ a .jurors-highlight:hover {
 }
 #sponsors> img:last-child{
     padding-bottom: 0;
+}
+.highlights {
+    padding: 0;
+    margin: 0;
+    font-size: 1.3rem;
+
 }

@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var connect = require('gulp-connect');
 var uglify = require('gulp-uglify');
+var stylish = require('jshint-stylish');
 
 // configure connect task
 gulp.task('connect', function() {
@@ -24,7 +25,7 @@ gulp.task('css', function () {
 gulp.task('jshint', function() {
   return gulp.src('js/main.js')
     .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
+    .pipe(jshint.reporter('stylish'));
 });
 
 // configure which files to watch and what tasks to use on file changes
@@ -36,7 +37,7 @@ gulp.task('watch', function() {
 
 // configure minify
 gulp.task('compress', function() {
-  return gulp.src('lib/*.js')
+  return gulp.src('js/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('dist'));
 });

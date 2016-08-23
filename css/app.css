@@ -28,15 +28,15 @@
          url('../fonts/HelveticaNeueLTStd-Roman.ttf') format('truetype'),
          url('../fonts/HelveticaNeueLTStd-Roman.svg#HelveticaNeueLTStd-Roman') format('svg');
 }
+body{
+
+    /*background-color: grey;*/
+    color: #f90c97;
+}
 
 h3{
     font-size: 1.6rem;
   font-family: 'HelveticaNeueLTStd-Bd';
-}
-body{
-
-  /*background-color: grey;*/
-  color: #f90c97;
 }
 hr {
   border-top: 1px dashed #f90c97;
@@ -53,7 +53,7 @@ a:hover{
 h5 {
   margin-left: 6px;
 }
-/*button {
+button {
   color: #ffffff;
   background-color: #f90c97;
   border-color: #fff;
@@ -97,7 +97,7 @@ fieldset[disabled] button.active {
 button .badge {
   color: #611BBD;
   background-color: #ffffff;
-}*/
+}
 
 .btn {
   color: #F90C97;

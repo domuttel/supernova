@@ -34,7 +34,7 @@ h3{
   font-family: 'HelveticaNeueLTStd-Bd';
 }
 body{
-
+    background-image: url(../images/background-y-lg-01.png);
   /*background-color: grey;*/
   color: #f90c97;
 }

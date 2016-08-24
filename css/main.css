@@ -331,6 +331,7 @@ a:hover{
 a .textbox-border{
     background: transparent;
     color: #f90c97;
+    margin-bottom: 4rem;
 }
 a .textbox-border:hover {
     color: #f90c97;

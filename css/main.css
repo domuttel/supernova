@@ -29,14 +29,17 @@
          url('../fonts/HelveticaNeueLTStd-Roman.svg#HelveticaNeueLTStd-Roman') format('svg');
 }
 
-h3{
-    font-size: 1.6rem;
-  font-family: 'HelveticaNeueLTStd-Bd';
-}
 body{
     background-image: url(../images/background-y-lg-01.png);
   /*background-color: grey;*/
   color: #f90c97;
+}
+h3{
+    font-size: 1.6rem;
+    font-family: 'HelveticaNeueLTStd-Bd';
+}
+h5 {
+    margin-left: 6px;
 }
 hr {
   border-top: 1px dashed #f90c97;
@@ -46,12 +49,8 @@ a {
   color: #f90c97;
 }
 a:hover{
-  color: white;
-  background-color: #f90c97;
-  text-decoration: none;
-}
-h5 {
-  margin-left: 6px;
+  color: #f90c97;
+  background-color: yellow;
 }
 /*button {
   color: #ffffff;
@@ -99,7 +98,7 @@ button .badge {
   background-color: #ffffff;
 }*/
 
-.btn {
+/*.btn {
   color: #F90C97;
   background-color: #FFFFFF;
   border-color: #F90C97;
@@ -147,7 +146,7 @@ fieldset[disabled] .btn.active {
 }
 .container-fluid {
   color: #f90c97;
-}
+}*/
 /* NAVBAR */
 .navbar {
     border-radius: 0;
@@ -339,25 +338,20 @@ fieldset[disabled] .btn.active {
   margin: 0 -60px -30px 0;
 }
 #footer-social > div > a{
+    text-decoration: none;
     font-size: 1.2rem;
     border: 1px dotted #f90c97;
     padding: 6px 3px 3px 3px;
     background-color: rgba(255, 255, 255, 0.65);
 }
 #footer-social > div > a:hover, a:active, a:focus{
-    font-size: 1.2rem;
     border: 1px dotted #f90c97;
     padding: 6px 3px 3px 3px;
     color: white;
     background-color: #f90c97;
 
-    /*background-color: white;*/
 }
-/*#footer-social img{
-  border: 0 solid white;
-  background-color: white;
-  border-radius: 6px;
-}*/
+
 @media (max-width: 1200px) {
   #contact-the-d{
     display: none;
@@ -516,10 +510,14 @@ a .jurors-highlight:hover {
   margin-right: 10px;
   /*margin:10px;*/
 }
-#sponsors> img {
-    padding-bottom: 2.5rem;
+#sponsors > a > img {
+    padding: 2rem .5rem 2rem .5rem;
 }
-#sponsors> img:last-child{
+#sponsors > a > img:hover {
+    background-color: yellow;
+    padding: 2rem .5rem 2rem .5rem;
+}
+#sponsors> a:last-child{
     padding-bottom: 0;
 }
 .highlights {

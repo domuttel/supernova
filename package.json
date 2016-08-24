@@ -1,14 +1,33 @@
 {
-  "name": "update-me",
-  "version": "0.0.0",
-  "description": "",
+  "name": "supernova",
+  "version": "1.0.0",
+  "description": "supernova website",
   "main": "gulpfile.js",
-  "author": "",
+  "scripts": {
+    "test": "sup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domuttel/supernova.git"
+  },
+  "author": "Dominic Muttel",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/domuttel/supernova/issues"
+  },
+  "homepage": "https://supernovadenver.com/",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-connect": "^2.2.0",
-    "gulp-jshint": "^1.11.2",
-    "jshint-stylish": "^2.0.1"
+    "browser-sync": "^2.14.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-jshint": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "jshint-stylish": "^2.2.1"
   }
 }

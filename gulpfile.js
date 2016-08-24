@@ -8,15 +8,9 @@ var gulp = require('gulp'),
     del = require('del'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
-// need to work in flow
-    handlebars = require('gulp-compile-handlebars'),
-// end
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish');
-
-
-
-
+ 
 // auto prefix vendors
 var AUTOPREFIXER_BROWSERS = [
     'ie >= 10',

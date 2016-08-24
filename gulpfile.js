@@ -3,6 +3,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
+    bourbon = require("node-bourbon").includePaths,
+    neat = require("node-neat").includePaths,
     cssmin = require('gulp-cssmin'),
     maps = require('gulp-sourcemaps'),
     del = require('del'),
@@ -10,7 +12,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish');
- 
+
 // auto prefix vendors
 var AUTOPREFIXER_BROWSERS = [
     'ie >= 10',
@@ -62,14 +64,17 @@ gulp.task('minifyScripts', ['concatScripts'], function(){
 gulp.task('compileSass', function(){
     return gulp.src('scss/**/*.scss')
     .pipe(maps.init())
-    .pipe(sass())
+    .pipe(sass({
+        includePaths: bourbon,
+        includePaths: neat
+      }))
 	.pipe(autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
     .pipe(maps.write('../maps')) // source map for debugging
     .pipe(gulp.dest('css'))
     .pipe(browserSync.stream())
 });
 
-gulp.task('minifyCss', ['compileSass'] function () {
+gulp.task('minifyCss', ['compileSass'], function () {
     return gulp.src('css/app.css')
     .pipe(cssmin())
     .pipe(rename('app.min.css'))
@@ -85,7 +90,7 @@ gulp.task('watchFiles', function(){
         server: "./"
     });
 
-    gulp.watch('scss/**/*.scss', ['compileSass']);
+    gulp.watch('scss/**/*.scss', ['compileSass', 'minifyCss'], browserSync.reload);
     gulp.watch('production/app.js', ['concatScripts'], browserSync.reload);
     gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch('js/*.js').on('change', browserSync.reload);

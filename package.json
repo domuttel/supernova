@@ -28,6 +28,9 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0",
-    "jshint-stylish": "^2.2.1"
+    "jshint": "^2.9.3",
+    "jshint-stylish": "^2.2.1",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^1.7.2"
   }
 }

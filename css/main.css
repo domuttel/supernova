@@ -10,6 +10,7 @@
     font-style: normal;
 
 }
+
 @font-face {
     font-family: 'HelveticaNeueLTStd-Bd';
     src: url('../fonts/HelveticaNeueLTStd-Bd.eot');
@@ -31,6 +32,7 @@
 body{
     background-image: url(../images/background-y-lg-01.png);
     color: #f90c97;
+
 }
 h3{
     font-size: 1.6rem;
@@ -108,13 +110,13 @@ a:hover{
     color: white;
     background-color: #f90c97;
 }
-@media(max-width: 450px){
+/*@media(max-width: 450px){
     .navbar-default .navbar-brand {
         line-height: 20px;
         font-size: 30px;
 
     }
-}
+}*/
 
 .navbar-default .navbar-nav>li>a {
     color: #f90c97;
@@ -291,7 +293,7 @@ a:hover{
     }
 }
 .page-info {
-    background-color: white;
+    /*background-color: white;*/
     color: #f90c97;
     padding: 20px 0 20px 0;
     margin-bottom: 10px;
@@ -322,7 +324,26 @@ a:hover{
     margin: 21px 0 35px 0;
 }
 .outer-no-pad {
+    /*background-color: yellow;*/
+    /*background: transparent;*/
     padding: 0;
+}
+a .textbox-border{
+    background: transparent;
+    color: #f90c97;
+}
+a .textbox-border:hover {
+    color: #f90c97;
+    background-color: yellow;
+}
+a .textbox-border:focus {
+    color: #f90c97;
+    background-color: yellow;
+
+}
+a .textbox-border:visited {
+    background-color: yellow;
+    color: #f90c97;
 }
 .inner-no-margin {
     margin: 0;

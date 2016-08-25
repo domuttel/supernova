@@ -1,0 +1,70 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.hidden {
+	display: none;
+}
+
+#nav-bar{
+	@include position(fixed, 0 null null 0);
+	// @include outer-container(100%);
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(space-between);
+	height: 3rem;
+	width: 100%;
+	background: pink;
+	#logo-banner{
+		@include span-columns(3);
+		@include background-image(url("../images/banner/sp-solid-blk.png"));
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center;
+		max-width: 20rem;
+		min-width: 16rem;
+		height: 37px;
+	}
+	#blurb {
+		@include span-columns(6);
+		text-align: center;
+	}
+	#nav-command{
+		@include span-columns(3);
+		@include display(flex);
+		@include justify-content(flex-end);
+		span{
+			padding: .5rem;
+		}
+	}
+}
+#nav-secondary-command{
+	width: 100%;
+	text-align: right;
+	@include position(fixed, 3rem null null 0);
+	@include display(flex);
+	@include align-items(flex-end);
+	@include justify-content(flex-end);
+	#about-list{
+		display: none;
+		div{
+			padding: .5rem;
+		}
+	}
+	#sched-list{
+		display: none;
+		div{
+			padding: .5rem;
+		}
+	}
+}
+// MOBILE NAV

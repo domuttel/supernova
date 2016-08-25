@@ -4,13 +4,13 @@
 ///
 /// @type Bool
 
-$visual-grid: false !default;
+$visual-grid: true !default;
 
 /// Sets the visual grid color. Set with `!global` flag.
 ///
 /// @type Color
 
-$visual-grid-color: #eee !default;
+$visual-grid-color: pink !default;
 
 /// Sets the `z-index` property of the visual grid. Can be `back` (behind content) or `front` (in front of content). Set with `!global` flag.
 ///

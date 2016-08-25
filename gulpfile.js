@@ -11,20 +11,21 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
     jshint = require('gulp-jshint'),
-    stylish = require('jshint-stylish');
+    stylish = require('jshint-stylish'),
+    handlebars = require('gulp-compile-handlebars');
 
 // auto prefix vendors
-var AUTOPREFIXER_BROWSERS = [
-    'ie >= 10',
-    'ie_mob >= 10',
-    'ff >= 30',
-    'chrome >= 34',
-    'safari >= 7',
-    'opera >= 23',
-    'ios >= 7',
-    'android >= 4.4',
-    'bb >= 10'
-];
+// var AUTOPREFIXER_BROWSERS = [
+//     'ie >= 10',
+//     'ie_mob >= 10',
+//     'ff >= 30',
+//     'chrome >= 34',
+//     'safari >= 7',
+//     'opera >= 23',
+//     'ios >= 7',
+//     'android >= 4.4',
+//     'bb >= 10'
+// ];
 // configure jshint task
 gulp.task('jshint', function() {
   return gulp.src('js/*.js')
@@ -36,7 +37,7 @@ gulp.task('jshint', function() {
 // js/main.js -> production/app.js
 //=======================================
 gulp.task('concatScripts', function(){
-  return gulp.src(['js/main.js', 'js/map.js']) // <- add other js files in array
+  return gulp.src(['js-prod/main.js']) // <- add other js files in array
   //concats files to one file
   .pipe(maps.init())
   .pipe(concat('app.js'))
@@ -68,8 +69,9 @@ gulp.task('compileSass', function(){
         includePaths: bourbon,
         includePaths: neat
       }))
-	.pipe(autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
+	// .pipe(autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
     .pipe(maps.write('../maps')) // source map for debugging
+    .pipe(rename('app.css'))
     .pipe(gulp.dest('css'))
     .pipe(browserSync.stream())
 });
@@ -81,8 +83,25 @@ gulp.task('minifyCss', ['compileSass'], function () {
     .pipe(gulp.dest('css'));
 });
 
+var templateData = {
+    blurb: 'OUTDOOR FESTIVAL OF DIGITAL ANIMATION AND ART DOWNTOWN DENVER SATURDAY SEPTEMBER 24TH',
+    login: 'LOGIN',
+    about: 'ABOUT',
+    sched: 'SCHEDULE',
+    aboutmenu: ['THE FESTIVAL', 'THE JURORS', 'THE TEAM', 'HISTORY', 'PRESS', 'SPONSORS', 'GUIDLINES', 'FUTURE OF ART'],
+    schedmenu: ['SCHEDULE', 'EDUCATION', 'MAP']
+}
+gulp.task('handle', function () {
+    return gulp.src('templates/layout.handlebars')
+        .pipe(handlebars(templateData))
+        .pipe(rename('index.html'))
+        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('./'));
+});
+
+
 //=======================================
-// watch sass for any changes
+// watch files for any changes
 //=======================================
 gulp.task('watchFiles', function(){
 
@@ -90,24 +109,23 @@ gulp.task('watchFiles', function(){
         server: "./"
     });
 
-    gulp.watch('scss/**/*.scss', ['compileSass', 'minifyCss'], browserSync.reload);
-    gulp.watch('production/app.js', ['concatScripts'], browserSync.reload);
-    gulp.watch('*.html').on('change', browserSync.reload);
-    gulp.watch('js/*.js').on('change', browserSync.reload);
-
+    gulp.watch('scss/**/*.scss', ['compileSass'], browserSync.reload);
+    gulp.watch('js/app.js', ['concatScripts'], browserSync.reload);
+    gulp.watch('*.html', browserSync.reload);
+    gulp.watch('templates/**/*.handlebars', ['handle'], browserSync.reload);
 });
 
 //=======================================
 // clean out old compiled pages
 //=======================================
 gulp.task('clean', function(){
-    del(['dist', 'css', 'production']);
+    del(['dist', 'css', 'js', 'index.html']);
 });
 
 //=======================================
 // build production dirrectory
 //=======================================
-gulp.task('build', ['minifyScripts', 'minifyCss'], function(){
+gulp.task('build', ['minifyScripts', 'minifyCss', 'handle'], function(){
     return gulp.src(['css/app.min.css', 'js/app.min.js', 'index.html', 'images/**', 'fonts/**'], { base: './' })
     .pipe(gulp.dest('dist'))
 });

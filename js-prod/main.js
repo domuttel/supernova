@@ -9,5 +9,3 @@ $(document).ready( function() {
         // $('#sched-list').hide();
     });
 });
-
-//# sourceMappingURL=../maps/app.js.map

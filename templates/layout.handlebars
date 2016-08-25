@@ -19,28 +19,23 @@
 <!-- NAV/SIDE +++++ FIXED -->
     <div id="nav-bar">
         <div id="logo-banner"></div>
-        <div id="blurb">OUTDOOR FESTIVAL OF DIGITAL ANIMATION AND ART DOWNTOWN DENVER SATURDAY SEPTEMBER 24TH</div>
+        <div id="blurb">{{ blurb }}</div>
         <div id="nav-command">
-            <span id="login-button">LOGIN</span>
-            <span id="about-button">ABOUT</span>
-            <span id="sched-button">SCHEDULE</span>
+            <span id="login-button">{{ login }}</span>
+            <span id="about-button">{{ about }}</span>
+            <span id="sched-button">{{ sched }}</span>
         </div>
     </div>
     <div id="nav-secondary-command">
         <div id="about-list">
-            <div>THE FESTIVAL</div>
-            <div>THE JURORS</div>
-            <div>THE TEAM</div>
-            <div>HISTORY</div>
-            <div>PRESS</div>
-            <div>SPONSORS</div>
-            <div>GUIDLINES</div>
-            <div>FUTURE OF ART</div>
+            {{#each aboutmenu}}
+            <div>{{this}}</div>
+            {{/each}}
         </div>
         <div id="sched-list">
-            <div>SCHEDULE</div>
-            <div>EDUCATION</div>
-            <div>MAP</div>
+            {{#each schedmenu}}
+            <div>{{this}}</div>
+            {{/each}}
         </div>
     </div>
     <div id="side-panels">

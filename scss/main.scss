@@ -10,47 +10,62 @@
 a {
 	text-decoration: none;
 }
-
+body{
+	font-family: Roboto;
+}
 .hidden {
 	display: none;
 }
 
 #nav-bar{
 	@include position(fixed, 0 null null 0);
-	// @include outer-container(100%);
+	@include outer-container(100%);
 	@include display(flex);
 	@include align-items(center);
 	@include justify-content(space-between);
-	height: 3rem;
+	height: 5rem;
 	width: 100%;
-	background: pink;
 	#logo-banner{
-		@include span-columns(3);
+		@include span-columns(3 0f 12);
 		@include background-image(url("../images/banner/sp-solid-blk.png"));
 		background-repeat: no-repeat;
 		background-size: 100%;
 		background-position: center;
-		max-width: 20rem;
-		min-width: 16rem;
+		max-width: 18rem;
+		min-width: 12rem;
 		height: 37px;
+		margin-left: 2rem;
 	}
 	#blurb {
-		@include span-columns(6);
+		// @include shift(1);
+		@include span-columns(6 of 12);
 		text-align: center;
+		font-weight: 700;
+		font-size: 1rem;
 	}
 	#nav-command{
-		@include span-columns(3);
+		@include span-columns(3 0f 12);
 		@include display(flex);
 		@include justify-content(flex-end);
+		font-size: 1.2rem;
+		font-weight: 200;
 		span{
+			border: 1px solid transparent;
 			padding: .5rem;
+		}
+		span:hover, span:focus, span:active{
+			padding: .5rem;
+			border: 1px dotted black;
+		}
+		span:last-child{
+		margin-right: 2rem;
 		}
 	}
 }
 #nav-secondary-command{
 	width: 100%;
 	text-align: right;
-	@include position(fixed, 3rem null null 0);
+	@include position(fixed, 6rem null null 0);
 	@include display(flex);
 	@include align-items(flex-end);
 	@include justify-content(flex-end);
@@ -58,13 +73,43 @@ a {
 		display: none;
 		div{
 			padding: .5rem;
+			margin-right: 2rem;
+			border: 1px solid transparent;
+			span{
+				border: 1px solid transparent;
+				padding: .5rem;
+			}
+			span:hover, span:focus, span:active{
+				padding: .5rem;
+				border: 1px dotted black;
+			}
 		}
 	}
 	#sched-list{
 		display: none;
 		div{
 			padding: .5rem;
+			margin-right: 2rem;
+			border: 1px solid transparent;
+			span{
+				border: 1px solid transparent;
+				padding: .5rem;
+			}
+			span:hover, span:focus, span:active{
+				padding: .5rem;
+				border: 1px dotted black;
+			}
 		}
 	}
 }
-// MOBILE NAV
+#side-panels{
+	@include position(fixed, 6rem null null 3.5rem);
+	@include outer-container(100%);
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(space-between);
+	div{
+		@include span-columns(3);
+	}
+
+}

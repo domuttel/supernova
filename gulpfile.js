@@ -89,7 +89,9 @@ var templateData = {
     about: 'ABOUT',
     sched: 'SCHEDULE',
     aboutmenu: ['THE FESTIVAL', 'THE JURORS', 'THE TEAM', 'HISTORY', 'PRESS', 'SPONSORS', 'GUIDLINES', 'FUTURE OF ART'],
-    schedmenu: ['SCHEDULE', 'EDUCATION', 'MAP']
+    schedmenu: ['SCHEDULE', 'EDUCATION', 'MAP'],
+    sponsorlinks: ['"http://artsandvenuesdenver.com"', '"http://www.artsandvenuesdenver.com/venues/denver-performing-arts-complex/the-next-stage-unveiled"', '"http://www.denverdigerati.com"', '"http://www.denvertheatredistrict.com"', '"http://www.ucdenver.edu/schools/cam/Pages/default.aspx"', '"http://www.bonfils-stantonfoundation.org"', '"http://www.orangebarrelmedia.com/"', '"http://www.biennialoftheamericas.org/"', '"http://www.weedenlaw.com/"']
+
 }
 gulp.task('handle', function () {
     return gulp.src('templates/layout.handlebars')

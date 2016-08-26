@@ -12,6 +12,7 @@
     <meta property="og:image"           content="___.jpg" />
     <meta property="og:description"     content="http://samples.ogp.me/390580850990722" />
     <title>SUPERNOVA</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/app.css" />
 </head>
 <body>
@@ -29,23 +30,26 @@
     <div id="nav-secondary-command">
         <div id="about-list">
             {{#each aboutmenu}}
-            <div>{{this}}</div>
+            <div><span>{{this}}</span></div>
             {{/each}}
         </div>
         <div id="sched-list">
             {{#each schedmenu}}
-            <div>{{this}}</div>
+            <div><span>{{this}}</span></div>
             {{/each}}
         </div>
     </div>
     <div id="side-panels">
         <div id="social-contact">
-
+            <a href="pages/contact.html"><img class="img-responsive" src="images/logos/sponsor-logos-01.png"></a>
+            <!-- <a href="https://vimeo.com/denverdigerati" target="_blank"><img src="images/vimeo-logo-02.png"></a>
+            <a href="https://www.facebook.com/DenverDigerati" target="_blank"><img src="images/facebook-logo-01.png"></a> -->
         </div>
-
         <div id="sponsors">
-
-        </div>
+            {{#each sponsorlinks }}
+            <a href={{{ this }}} target="_blank"></a>
+            {{/each}}
+          </div>
     </div>
 <!-- END NAV/SIDE +++++ FIXED -->
 

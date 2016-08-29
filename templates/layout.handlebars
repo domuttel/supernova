@@ -16,11 +16,16 @@
     <link rel="stylesheet" type="text/css" href="css/app.css" />
 </head>
 <body>
-
+<!-- <body class="jquery-background-video-wrapper">
+<video class="my-background-video jquery-background-video" loop autoplay muted poster="images/video/SUPERNOVA - 30 Second Promotional Trailer.jpg">
+    <source src="images/video/SUPERNOVA - 30 Second Promotional Trailer.mp4" type="video/mp4">
+        <source src="images/video/SUPERNOVA - 30 Second Promotional Trailer.webm" type="video/webm">
+       <source src="images/video/SUPERNOVA - 30 Second Promotional Trailer.ogv" type="video/ogg">
+</video> -->
 <!-- NAV/SIDE +++++ FIXED -->
     <div id="nav-bar">
-        <div id="logo-banner"></div>
-        <div id="blurb">{{ blurb }}</div>
+        <div id="logo-banner">SUPERNOVA</div>
+        <div id="blurb"><span>{{ blurb }}</span></div>
         <div id="nav-command">
             <span id="login-button">{{ login }}</span>
             <span id="about-button">{{ about }}</span>
@@ -28,29 +33,37 @@
         </div>
     </div>
     <div id="nav-secondary-command">
-        <div id="about-list">
+        <div id="about-list" class="nav-list">
             {{#each aboutmenu}}
-            <div><span>{{this}}</span></div>
+            <div>{{this}}</div>
             {{/each}}
         </div>
-        <div id="sched-list">
+        <div id="sched-list" class="nav-list">
             {{#each schedmenu}}
-            <div><span>{{this}}</span></div>
+            <div>{{this}}</div>
             {{/each}}
         </div>
     </div>
-    <div id="side-panels">
+    <div id="main-container">
+        <div id="blurb-sub"><span>{{ blurb }}</span></div>
+        <div id="page-content">
+
+        </div>
+
+    </div>
+    <!-- <div id="side-panels"> -->
         <div id="social-contact">
-            <a href="pages/contact.html"><img class="img-responsive" src="images/logos/sponsor-logos-01.png"></a>
+            <a href="pages/contact.html"><img src="images/main-logo.png"></a>
             <!-- <a href="https://vimeo.com/denverdigerati" target="_blank"><img src="images/vimeo-logo-02.png"></a>
             <a href="https://www.facebook.com/DenverDigerati" target="_blank"><img src="images/facebook-logo-01.png"></a> -->
         </div>
         <div id="sponsors">
+            <span>SPONSORS</span>
             {{#each sponsorlinks }}
-            <a href={{{ this }}} target="_blank"></a>
+            {{{ url }}}{{{ img }}}</a>
             {{/each}}
-          </div>
-    </div>
+         </div>
+    <!-- </div> -->
 <!-- END NAV/SIDE +++++ FIXED -->
 
 <!-- CONTENT -->

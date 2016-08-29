@@ -1,6 +1,11 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
-
+@import 'stuff';
+$color-yellow-trans: rgba(255,255,0,0.5);
+$color-yellow: rgba(255,255,0,1);
+$color-pink-trans: rgba(235,0,139,0.5);
+$color-pink: rgba(235,0,139,1);
+@include font-face("polya-webfont", "/fonts/polya-webfont");
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -12,104 +17,302 @@ a {
 }
 body{
 	font-family: Roboto;
+	background-image: url(../images/background/blue-01.png);
 }
+
+
 .hidden {
 	display: none;
 }
 
 #nav-bar{
 	@include position(fixed, 0 null null 0);
-	@include outer-container(100%);
 	@include display(flex);
 	@include align-items(center);
 	@include justify-content(space-between);
+	z-index: 5000;
 	height: 5rem;
-	width: 100%;
+	width:100%;
+	background-color: $color-yellow;;
 	#logo-banner{
-		@include span-columns(3 0f 12);
-		@include background-image(url("../images/banner/sp-solid-blk.png"));
-		background-repeat: no-repeat;
-		background-size: 100%;
-		background-position: center;
-		max-width: 18rem;
-		min-width: 12rem;
-		height: 37px;
+		@include span-columns(3);
+		font-family: "polya-webfont";
+		font-size: 3rem;
+		color: $color-pink;
 		margin-left: 2rem;
 	}
 	#blurb {
 		// @include shift(1);
-		@include span-columns(6 of 12);
+		@include span-columns(6);
 		text-align: center;
 		font-weight: 700;
 		font-size: 1rem;
+		display:none;
+		color: $color-pink;
+		@include media(min-width 1297px){
+			display: block;
+		}
+		span{
+			background-color: white;
+			line-height: 1.5rem;
+			padding: .1rem;
+
+		}
 	}
 	#nav-command{
-		@include span-columns(3 0f 12);
+		@include span-columns(3);
 		@include display(flex);
 		@include justify-content(flex-end);
 		font-size: 1.2rem;
 		font-weight: 200;
+		color: white;
+
 		span{
-			border: 1px solid transparent;
+			background: transparent;
 			padding: .5rem;
+			margin-left: .25rem;
+			border: 1px dotted $color-pink;
+			color: $color-pink;
+			@include media(max-width 800px){
+				display:none;
+			}
 		}
 		span:hover, span:focus, span:active{
 			padding: .5rem;
-			border: 1px dotted black;
+			color: $color-pink;
+			border: 1px dotted $color-pink;
+			background: rgba(255,255,255,1);
 		}
 		span:last-child{
-		margin-right: 2rem;
+		margin-right: 1rem;
 		}
 	}
+
 }
+#main-container{
+	width: 100%;
+	position: absolute;
+	top: 5.1rem;
+	#blurb-sub {
+		@include shift(1);
+		@include span-columns(10);
+		display: none;
+		text-align: center;
+		font-weight: 700;
+		font-size: 1rem;
+		color: $color-pink;
+		@include media(max-width 1297px){
+			display: block;
+		}
+		span{
+			background-color: rgba(255,255,255,0.7);
+			line-height: 1.5rem;
+			padding: .1rem;
+		}
+	}
+	#page-content{
+		position: absolute;
+		height:120vh;
+		width: 70%;
+		margin-top: 4rem;
+		margin-left: 15%;
+		margin-bottom: 6rem;
+		background-color: rgba(255,255,255,0.7);
+	}
+
+}
+// right horizontal
+// #nav-secondary-command{
+// 	width: 100%;
+// 	text-align: right;
+// 	@include position(fixed, 4.5rem null null 0);
+// 	@include display(flex);
+// 	@include align-items(center);
+// 	@include justify-content(flex-end);
+// 	z-index: 5500;
+// 	.nav-list{
+// 		display: none;
+// 		margin-right: 1rem;
+// 		span{
+// 			border: 1px solid transparent;
+// 			padding: .5rem;
+// 		}
+// 		span:hover, span:focus, span:active{
+// 			padding: .5rem;
+// 			border: 1px dotted black;
+// 		}
+// 	}
+// }
+// right vertical
 #nav-secondary-command{
 	width: 100%;
 	text-align: right;
-	@include position(fixed, 6rem null null 0);
+	@include position(fixed, 4.5rem null null 0);
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(flex-end);
+	z-index: 5500;
+	@include media(max-width 800px){
+		display:none;
+	}
+	.nav-list{
+		display: none;
+		margin-right: .5rem;
+		color: $color-pink;
+		div{
+			border: 1px dotted $color-pink;
+			padding: .5rem;
+			background-color: rgba(255,255,255,0.75);
+			margin: .5rem;
+		}
+		div:hover, span:focus, span:active{
+			padding: .5rem;
+			border: 1px dotted black;
+			background: rgba(255,255,255,1);
+		}
+
+	}
+	#about-list{
+		margin-right: 7.8rem;
+	}
+}
+
+
+#sponsors{
+	@include position(fixed, null null 0 0);
 	@include display(flex);
 	@include align-items(flex-end);
-	@include justify-content(flex-end);
-	#about-list{
+	@include flex-direction(column);
+	width: 100%;
+	@include media(max-width 800px){
 		display: none;
-		div{
-			padding: .5rem;
-			margin-right: 2rem;
-			border: 1px solid transparent;
-			span{
-				border: 1px solid transparent;
-				padding: .5rem;
-			}
-			span:hover, span:focus, span:active{
-				padding: .5rem;
-				border: 1px dotted black;
-			}
-		}
 	}
-	#sched-list{
-		display: none;
-		div{
-			padding: .5rem;
-			margin-right: 2rem;
-			border: 1px solid transparent;
-			span{
-				border: 1px solid transparent;
-				padding: .5rem;
-			}
-			span:hover, span:focus, span:active{
-				padding: .5rem;
-				border: 1px dotted black;
-			}
+
+	// text-align: center;
+	span{
+		margin-right: .5rem;
+		font-size: 1.2rem;
+		width: 130px;
+		text-align: center;
+		margin-bottom: 1.15rem;
+		background-color: rgba(255,255,255,0.8);
+		border: solid #286e90 2px;
+		color: #286e90;
+
+	}
+	a{
+		width: 130px;
+		height: 100%;
+		margin-right: .5rem;
+		// margin-top: 1rem;
+		img{
+			// @include span-columns(8);
+			width: 100%;
+			padding: 1rem;
+			min-width: 120px;
+			margin-top: -1rem;
+			border: solid transparent 2px;
+			background: transparent;
+			transition: all .5s;
+		}
+		img:hover, img:focus, img:active {
+			background-color: rgba(255,255,255,0.8);
+			border: solid #286e90 2px;
 		}
 	}
 }
-#side-panels{
-	@include position(fixed, 6rem null null 3.5rem);
-	@include outer-container(100%);
-	@include display(flex);
-	@include align-items(center);
-	@include justify-content(space-between);
-	div{
-		@include span-columns(3);
+#social-contact{
+	@include position(fixed, 5.5rem -1rem null null);
+	width: 100%;
+	z-index: -5000;
+	img{
+		width: 12%;
+		min-width: 8rem;
 	}
 
+}
+.jquery-background-video-wrapper {
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	    	background-size: cover;
+}
+.jquery-background-video {
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-webkit-transform: translate(-50%,-50%);
+	   -moz-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	     -o-transform: translate(-50%,-50%);
+	    	transform: translate(-50%,-50%);
+}
+/**
+ * Fade in videos
+ * Note the .js class - so non js users still
+ * see the video
+ */
+.js .jquery-background-video {
+	opacity: 0;
+	-webkit-transition: opacity 300ms linear;
+			transition: opacity 300ms linear;
+}
+.js .jquery-background-video.is-visible {
+	opacity: 1;
+}
+
+/**
+ * Pause/play button
+ */
+.jquery-background-video-pauseplay {
+	position: absolute;
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	width: 20px;
+	height: 20px;
+	top: 15px;
+	right: 15px;
+	padding: 0 !important;
+	cursor: pointer;
+	outline: none !important;
+}
+.jquery-background-video-pauseplay span {
+	display: none;
+}
+.jquery-background-video-pauseplay:after,
+.jquery-background-video-pauseplay:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	-webkit-transition: all .3s ease;
+			transition: all .3s ease;
+}
+.jquery-background-video-pauseplay.play:before {
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 15px solid #FFF;
+}
+.jquery-background-video-pauseplay.pause:before,
+.jquery-background-video-pauseplay.pause:after {
+	border-top: 10px solid #FFF;
+	border-bottom: 10px solid #FFF;
+	border-left: 5px solid #FFF;
+}
+.jquery-background-video-pauseplay.pause:after {
+	left: 10px;
 }

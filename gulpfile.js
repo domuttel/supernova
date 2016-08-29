@@ -90,8 +90,26 @@ var templateData = {
     sched: 'SCHEDULE',
     aboutmenu: ['THE FESTIVAL', 'THE JURORS', 'THE TEAM', 'HISTORY', 'PRESS', 'SPONSORS', 'GUIDLINES', 'FUTURE OF ART'],
     schedmenu: ['SCHEDULE', 'EDUCATION', 'MAP'],
-    sponsorlinks: ['"http://artsandvenuesdenver.com"', '"http://www.artsandvenuesdenver.com/venues/denver-performing-arts-complex/the-next-stage-unveiled"', '"http://www.denverdigerati.com"', '"http://www.denvertheatredistrict.com"', '"http://www.ucdenver.edu/schools/cam/Pages/default.aspx"', '"http://www.bonfils-stantonfoundation.org"', '"http://www.orangebarrelmedia.com/"', '"http://www.biennialoftheamericas.org/"', '"http://www.weedenlaw.com/"']
-
+    sponsorlinks: [
+        {url: '<a href="http://artsandvenuesdenver.com" target="_blank">',
+        img:'<img src="images/logos/sponsor-logos-02.png">'},
+        {url: '<a href="http://www.artsandvenuesdenver.com/venues/denver-performing-arts-complex/the-next-stage-unveiled" target="_blank">',
+        img: '<img src="images/logos/sponsor-logos-03.png">'},
+        {url: '<a href="http://www.denverdigerati.com" target="_blank">',
+        img: '<img src="images/logos/sponsor-logos-04.png">'},
+        {url: '<a href="http://www.denvertheatredistrict.com" target="_blank">',
+        img: '<img src="images/logos/sponsor-logos-05.png">'},
+        {url: '<a href="http://www.ucdenver.edu/schools/cam/Pages/default.aspx" target="_blank">',
+        img: '<img src="images/logos/sponsor-logos-06.png">'},
+        {url: '<a href="http://www.bonfils-stantonfoundation.org" target="_blank">',
+        img: '<img src="images/logos/sponsor-logos-07.png">'},
+        {url: '<a href="http://www.orangebarrelmedia.com/" target="_blank">',
+        img: '<img src="images/logos/sponsor-logos-08.png">'},
+        {url: '<a href="http://www.biennialoftheamericas.org/" target="_blank">',
+        img: '<img src="images/logos/sponsor-logos-09.png">'},
+        {url: '<a href="http://www.weedenlaw.com/" target="_blank">',
+        img: '<img src="images/logos/sponsor-logos-10.png">'}
+    ]
 }
 gulp.task('handle', function () {
     return gulp.src('templates/layout.handlebars')

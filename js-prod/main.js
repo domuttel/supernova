@@ -6,6 +6,9 @@ $(document).ready( function() {
     $('#nav-command').on('click','#sched-button', function(){
         $('#sched-list').fadeIn();
         $('#about-list').hide();
-        // $('#sched-list').hide();
     });
+    $('.my-background-video').bgVideo();
+    $('#mobil-nav').click(function(){
+    $(this).toggleClass('open');
+});
 });

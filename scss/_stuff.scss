@@ -1,0 +1,110 @@
+//*********************************
+// VARIABLES **********************
+//*********************************
+$color-yellow-trans: rgba(255,255,0,0.5);
+$color-yellow: rgba(255,255,0,1);
+$color-pink-trans: rgba(235,0,139,0.5);
+$color-pink: rgba(235,0,139,1);
+//*********************************
+// FONTS **************************
+//*********************************
+@include font-face("polya-webfont", "/fonts/polya-webfont");
+//*********************************
+// NAVIGATION *********************
+//*********************************
+#nav-bar{
+	@include position(fixed, 0 null null 0);
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(space-between);
+	z-index: 5000;
+	height: 5rem;
+	width:100%;
+	background-color: $color-yellow;
+	#logo-banner{
+		@include span-columns(3);
+		font-family: "polya-webfont";
+		font-size: 3rem;
+		color: $color-pink;
+		margin-left: 2rem;
+	}
+	#blurb {
+		@include span-columns(6);
+		text-align: center;
+		font-weight: 700;
+		font-size: 1rem;
+		display:none;
+		color: $color-pink;
+		@include media(min-width 1297px){
+			display: block;
+		}
+		span{
+			background-color: white;
+			line-height: 1.5rem;
+			padding: .1rem;
+
+		}
+	}
+	#nav-command{
+		@include span-columns(3);
+		@include display(flex);
+		@include justify-content(flex-end);
+		font-size: 1.2rem;
+		font-weight: 200;
+		color: white;
+
+		span{
+			background: transparent;
+			padding: .5rem;
+			margin-left: .25rem;
+			border: 1px dotted $color-pink;
+			color: $color-pink;
+			@include media(max-width 800px){
+				display:none;
+			}
+		}
+		span:hover, span:focus, span:active{
+			padding: .5rem;
+			color: $color-pink;
+			border: 1px dotted $color-pink;
+			background: rgba(255,255,255,1);
+		}
+		span:last-child{
+		margin-right: 1rem;
+		}
+	}
+
+}
+#nav-secondary-command{
+	width: 100%;
+	text-align: right;
+	@include position(fixed, 4.5rem null null 0);
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(flex-end);
+	z-index: 5500;
+	@include media(max-width 800px){
+		display:none;
+	}
+	.nav-list{
+		display: none;
+		margin-right: .5rem;
+		color: $color-pink;
+		div{
+			padding: .3rem 0;
+			margin: .5rem;
+		span{
+			padding: .4rem;
+			border: 1px dotted $color-pink;
+			background-color: rgba(255,255,255,0.75);
+		}
+		span:hover, span:focus, span:active{
+			border: 1px dotted black;
+			background: rgba(255,255,255,1);
+		}
+	}
+	}
+	#about-list{
+		margin-right: 7.8rem;
+	}
+}

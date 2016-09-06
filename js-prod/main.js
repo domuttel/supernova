@@ -7,8 +7,12 @@ $(document).ready( function() {
         $('#sched-list').fadeIn();
         $('#about-list').hide();
     });
-    $('.my-background-video').bgVideo();
-    $('#mobil-nav').click(function(){
-    $(this).toggleClass('open');
-});
+    $('#enter-sp').on('click', function(){
+        $('#videobg').hide();
+        $(this).hide();
+    });
+    // var video = document.getElementById("videobg");
+    // function enterSp(){
+    //     video.hide();
+    // }
 });

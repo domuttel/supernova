@@ -16,17 +16,13 @@
     <link rel="stylesheet" type="text/css" href="css/app.css" />
 </head>
 <body>
-<!-- <body class="jquery-background-video-wrapper">
-<video class="my-background-video jquery-background-video" loop autoplay muted poster="images/video/SUPERNOVA - 30 Second Promotional Trailer.jpg">
-    <source src="images/video/SUPERNOVA - 30 Second Promotional Trailer.mp4" type="video/mp4">
-        <source src="images/video/SUPERNOVA - 30 Second Promotional Trailer.webm" type="video/webm">
-       <source src="images/video/SUPERNOVA - 30 Second Promotional Trailer.ogv" type="video/ogg">
-</video> -->
+
 <!-- NAV/SIDE +++++ FIXED -->
     <div id="nav-bar">
         <div id="logo-banner">SUPERNOVA</div>
         <div id="blurb"><span>OUTDOOR FESTIVAL OF DIGITAL ANIMATION AND ART DOWNTOWN DENVER SATURDAY SEPTEMBER 24TH</span></div>
         <div id="nav-command">
+            <!-- <span id="enter-sp">ENTER</span> -->
             <span id="login-button">LOGIN</span>
             <span id="about-button">ABOUT</span>
             <span id="sched-button">SCHEDULE</span>
@@ -34,19 +30,19 @@
     </div>
     <div id="nav-secondary-command">
         <div id="about-list" class="nav-list">
-            <div>THE FESTIVAL</div>
-            <div>THE JURORS</div>
-            <div>THE TEAM</div>
-            <div>HISTORY</div>
-            <div>PRESS</div>
-            <div>SPONSORS</div>
-            <div>GUIDLINES</div>
-            <div>FUTURE OF ART</div>
+            <div><span>THE FESTIVAL</span></div>
+            <div><span>THE JURORS</span></div>
+            <div><span>THE TEAM</span></div>
+            <div><span>HISTORY</span></div>
+            <div><span>PRESS</span></div>
+            <div><span>SPONSORS</span></div>
+            <div><span>GUIDLINES</span></div>
+            <div><span>FUTURE OF ART</span></div>
         </div>
         <div id="sched-list" class="nav-list">
-            <div>SCHEDULE</div>
-            <div>EDUCATION</div>
-            <div>MAP</div>
+            <div><span>SCHEDULE</span></div>
+            <div><span>EDUCATION</span></div>
+            <div><span>MAP</span></div>
         </div>
     </div>
     <div id="main-container">
@@ -63,7 +59,7 @@
             <a href="https://www.facebook.com/DenverDigerati" target="_blank"><img src="images/facebook-logo-01.png"></a> -->
         </div>
         <div id="sponsors">
-            <span>SPONSORS</span>
+            <a href="pages/sponsors.html"><span>SPONSORS</span></a>
             <a href="http://artsandvenuesdenver.com" target="_blank"><img src="images/logos/sponsor-logos-02.png"></a>
             <a href="http://www.artsandvenuesdenver.com/venues/denver-performing-arts-complex/the-next-stage-unveiled" target="_blank"><img src="images/logos/sponsor-logos-03.png"></a>
             <a href="http://www.denverdigerati.com" target="_blank"><img src="images/logos/sponsor-logos-04.png"></a>
@@ -82,7 +78,57 @@
 
     </div>
 <!-- END CONTENT -->
+<!-- MAIN VIDEO BACKGROUND -->
+    <video poster="images/video/SMMC3promo.jpg" id="videobg" autoplay loop>
+        <source src="images/video/SMMC3promo.webm" type="video/webm">
+        <source src="images/video/SMMC3promo.mp4" type="video/mp4">
+    </video>
+    <!-- <div class="vid-controller">
+        <button id="play" onclick="vidplay();">Play/Pause</button>
+        <button id="restart" onclick="restart();">RESTART</button>
+    </div> -->
+<!--END - MAIN VIDEO BACKGROUND -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js-prod/mo.min.js"></script>
     <script type="text/javascript" src="js-prod/main.js"></script>
+    <script type="text/javascript">
+    // var video = document.getElementById("videobg");
+    // function enterSp(){
+    //     video.hide();
+    // }
+
+    // function pauseAt(){
+    //     video.addEventListener("timeupdate", function(){
+    //         if(this.currentTime >= 29) {
+    //             this.pause();
+    //         }
+    //     });
+    // };
+    // video.autoplay = true;
+    // video.muted = true;
+    // video.autoloop = true;
+
+    // video.onloadstart = function() {
+    //     video.currentTime = 1;
+    //     video.play();
+    //     if (video.end === true){
+    //     }
+    // };
+
+    // function vidplay() {
+    //     video.loop=true;
+    //     if (video.paused) {
+    //         video.play();
+    //     } else {
+    //         video.pause();
+    //     }
+    // }
+
+    // function restart() {
+    //     video.currentTime = 1;
+    //     video.play();
+    //     pauseAt(video);
+    // }
+    </script>
 </body>
 </html>

@@ -60,10 +60,10 @@ html {
     margin-right: 2.35765%;
     width: 31.76157%;
     text-align: center;
-    font-weight: 700;
+    font-weight: 200;
     font-size: 1rem;
     display: none;
-    color: #eb008b; }
+    color: black; }
     #nav-bar #blurb:last-child {
       margin-right: 0; }
     @media screen and (min-width: 1000px) {
@@ -218,14 +218,23 @@ body {
     width: 65.88078%;
     display: none;
     text-align: center;
-    font-weight: 700;
+    font-weight: 200;
     font-size: 1rem;
-    color: #eb008b; }
+    color: black; }
     #main-container #blurb-sub:last-child {
       margin-right: 0; }
     @media screen and (max-width: 1000px) {
       #main-container #blurb-sub {
         display: block; } }
+    @media screen and (max-width: 800px) {
+      #main-container #blurb-sub {
+        margin-left: 0%;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        #main-container #blurb-sub:last-child {
+          margin-right: 0; } }
     #main-container #blurb-sub span {
       background-color: rgba(255, 255, 255, 0.7);
       line-height: 1.5rem;
@@ -368,10 +377,26 @@ body {
         height: 100%; } }
 
 .page-titles {
-  width: 100%;
-  height: auto; }
+  width: 100%; }
+  .page-titles h1 {
+    margin-top: -2rem;
+    color: #eb008b; }
   .page-titles h2 {
     color: #eb008b; }
+  .page-titles ul {
+    padding: 1rem; }
+    .page-titles ul li {
+      padding-bottom: .5rem; }
+  .page-titles span {
+    font-size: 1.2rem;
+    font-weight: 200; }
+
+.box {
+  padding: .85rem;
+  border: 0.15rem solid yellow;
+  background-color: white; }
+  .box span {
+    line-height: 1.4rem; }
 
 #the-jurors span {
   float: left;

@@ -31,10 +31,10 @@ $color-pink: rgba(235,0,139,1);
 	#blurb {
 		@include span-columns(4);
 		text-align: center;
-		font-weight: 700;
+		font-weight: 200;
 		font-size: 1rem;
 		display:none;
-		color: $color-pink;
+		color: black;
 		@include media(min-width 1000px){
 			display: block;
 		}

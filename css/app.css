@@ -598,8 +598,7 @@ body {
   width: 100%;
   height: inherit;
   margin: 0;
-  padding: 0;
-  display: none; }
+  padding: 0; }
   .sched-containers .map-images {
     width: 100%;
     height: 450px;
@@ -726,5 +725,110 @@ body {
         width: 91.4702%; }
         .sched-containers .about-event:last-child {
           margin-right: 0; } }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.card {
+  cursor: pointer;
+  flex-basis: 15em;
+  flex-grow: 1;
+  margin: 0 1em 1.5em 1em;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out; }
+  .card .card-image {
+    background-image: url(http://prashantsani.com/Misc/codepen/noise.jpg);
+    background-repeat: repeat;
+    background-position: 0 0;
+    -webkit-animation: noiseAnim 0.5s infinite linear alternate;
+    -moz-animation: noiseAnim 0.5s infinite linear alternate;
+    -o-animation: noiseAnim 0.5s infinite linear alternate;
+    animation: noiseAnim 0.5s infinite linear alternate;
+    height: 98%;
+    overflow: hidden; }
+    .card .card-image img {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+      width: 100%; }
+  .card .card-header {
+    transition: all .75s ease-in-out; }
+  .card .card-copy {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: 0.75em 0.75em; }
+    .card .card-copy p {
+      margin: 0 0 0.75em; }
+  .card:focus, .card:hover {
+    cursor: pointer; }
+    .card:focus img, .card:hover img {
+      opacity: 0.5; }
+    .card:focus .card-header, .card:hover .card-header {
+      background-color: #f6f6f6;
+      font-size: 1.5rem; }
+  .card:active {
+    background-color: #f6f6f6; }
+    .card:active .card-header {
+      background-color: #f6f6f6; }
+
+@-webkit-keyframes noiseAnim {
+  0% {
+    background-position: 10px 200px; }
+  20% {
+    background-position: -50px 0; }
+  40% {
+    background-position: 100px -10px; }
+  60% {
+    background-position: 0 -150px; }
+  80% {
+    background-position: -100px -30px; }
+  100% {
+    background-position: 160px -60px; } }
+
+@-moz-keyframes noiseAnim {
+  0% {
+    background-position: 10px 200px; }
+  20% {
+    background-position: -50px 0; }
+  40% {
+    background-position: 100px -10px; }
+  60% {
+    background-position: 0 -150px; }
+  80% {
+    background-position: -100px -30px; }
+  100% {
+    background-position: 160px -60px; } }
+
+@-o-keyframes noiseAnim {
+  0% {
+    background-position: 10px 200px; }
+  20% {
+    background-position: -50px 0; }
+  40% {
+    background-position: 100px -10px; }
+  60% {
+    background-position: 0 -150px; }
+  80% {
+    background-position: -100px -30px; }
+  100% {
+    background-position: 160px -60px; } }
+
+@keyframes noiseAnim {
+  0% {
+    background-position: 10px 200px; }
+  20% {
+    background-position: -50px 0; }
+  40% {
+    background-position: 100px -10px; }
+  60% {
+    background-position: 0 -150px; }
+  80% {
+    background-position: -100px -30px; }
+  100% {
+    background-position: 160px -60px; } }
 
 /*# sourceMappingURL=../maps/main.css.map */

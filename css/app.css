@@ -381,6 +381,47 @@ body {
 
 .page-titles {
   width: 100%; }
+  .page-titles .profile-image {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .page-titles .profile-image:last-child {
+      margin-right: 0; }
+    .page-titles .profile-image img {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      border: 3px solid yellow;
+      background-color: white; }
+      .page-titles .profile-image img:last-child {
+        margin-right: 0; }
+  .page-titles .profile-info {
+    margin-top: 2.5rem; }
+  .page-titles .crae-text {
+    font-family: "polya-webfont";
+    font-size: 2rem; }
+  .page-titles iframe {
+    margin-left: 51.17883%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    height: auto 0;
+    margin-top: 1rem;
+    margin-bottom: 9rem; }
+    .page-titles iframe:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 800px) {
+      .page-titles iframe {
+        margin-left: 0%;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        .page-titles iframe:last-child {
+          margin-right: 0; } }
   .page-titles h1 {
     margin-top: -2rem;
     color: #eb008b; }

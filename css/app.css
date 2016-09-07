@@ -348,6 +348,9 @@ body {
 .after-thing {
   margin-top: 2rem; }
 
+.after-thing-sub {
+  margin-top: 3rem; }
+
 .page-head {
   width: 100%;
   padding: 0;
@@ -455,5 +458,95 @@ body {
     opacity: 0.6; }
   #the-jurors span a:hover h3 {
     text-decoration: line-through; }
+
+.sched-containers {
+  width: 100%;
+  height: inherit;
+  margin: 0;
+  padding: 0; }
+  .sched-containers .time {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    font-family: "polya-webfont";
+    color: yellow;
+    font-size: 4rem;
+    font-weight: 200;
+    margin-bottom: -.7rem; }
+    .sched-containers .time:last-child {
+      margin-right: 0; }
+  .sched-containers .place {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    font-size: 1.6rem;
+    font-weight: 400; }
+    .sched-containers .place:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 800px) {
+      .sched-containers .place {
+        margin-left: 4.2649%;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 91.4702%; }
+        .sched-containers .place:last-child {
+          margin-right: 0; } }
+  .sched-containers .event {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    font-size: 1.6rem;
+    color: #eb008b; }
+    .sched-containers .event:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 800px) {
+      .sched-containers .event {
+        margin-left: 4.2649%;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 91.4702%; }
+        .sched-containers .event:last-child {
+          margin-right: 0; } }
+  .sched-containers .event-last {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    margin-left: 25.58941%;
+    font-size: 1.6rem; }
+    .sched-containers .event-last:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 800px) {
+      .sched-containers .event-last {
+        margin-left: 4.2649%;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 91.4702%; }
+        .sched-containers .event-last:last-child {
+          margin-right: 0; } }
+  .sched-containers .about-event {
+    margin-left: 25.58941%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    margin-bottom: 1.4rem; }
+    .sched-containers .about-event:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 800px) {
+      .sched-containers .about-event {
+        margin-left: 4.2649%;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 91.4702%; }
+        .sched-containers .about-event:last-child {
+          margin-right: 0; } }
 
 /*# sourceMappingURL=../maps/main.css.map */

@@ -134,7 +134,9 @@ body{
 .after-thing{
 	margin-top: 2rem;
 }
-
+.after-thing-sub{
+	margin-top: 3rem;
+}
 .page-head{
 	width: 100%;
 	padding: 0;
@@ -209,9 +211,8 @@ body{
 			// background-color: white;
 		}
 	}
-	// table, th, td {
-	// }
 }
+
 .box{
 	padding: .85rem;
 	border: .15rem solid $color-yellow;
@@ -264,6 +265,56 @@ body{
 			h3{
 				text-decoration: line-through;
 			}
+		}
+	}
+}
+.sched-containers {
+	width: 100%;
+	height: inherit;
+	margin: 0;
+	padding: 0;
+	.time {
+		@include span-columns(12);
+		font-family: "polya-webfont";
+		color: $color-yellow;
+		font-size: 4rem;
+		font-weight: 200;
+		margin-bottom: -.7rem;
+	}
+	.place{
+		@include span-columns(3);
+		font-size: 1.6rem;
+		font-weight: 400;
+		@include media(max-width 800px){
+			@include shift(0.5);
+			@include span-columns(11);
+		}
+	}
+	.event{
+		@include span-columns(9);
+		font-size: 1.6rem;
+		color: $color-pink;
+		@include media(max-width 800px){
+			@include shift(0.5);
+			@include span-columns(11);
+		}
+	}
+	.event-last{
+		@include span-columns(9);
+		@include shift(3);
+		font-size: 1.6rem;
+		@include media(max-width 800px){
+			@include shift(0.5);
+			@include span-columns(11);
+		}
+	}
+	.about-event{
+		@include shift(3);
+		@include span-columns(9);
+		margin-bottom: 1.4rem;
+		@include media(max-width 800px){
+			@include shift(0.5);
+			@include span-columns(11);
 		}
 	}
 }

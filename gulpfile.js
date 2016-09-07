@@ -88,7 +88,7 @@ var templateData = {
     login: 'LOGIN',
     about: 'ABOUT',
     sched: 'SCHEDULE',
-    aboutmenu: ['THE FESTIVAL', 'THE JURORS', 'THE TEAM', 'HISTORY', 'PRESS', 'SPONSORS', 'GUIDLINES', 'FUTURE OF ART'],
+    aboutmenu: ['FESTIVAL', 'JURORS', 'TEAM', 'HISTORY', 'PRESS', 'SPONSORS', 'GUIDLINES', 'FUTURE OF ART'],
     schedmenu: ['SCHEDULE', 'EDUCATION', 'MAP'],
     sponsorlinks: [
         {url: '<a href="http://artsandvenuesdenver.com" target="_blank">',

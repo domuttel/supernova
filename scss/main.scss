@@ -170,7 +170,6 @@ body{
 
 .page-titles {
 	width: 100%;
-	// height: auto;
 	h1{
 		margin-top: -2rem;
 		color: $color-pink;
@@ -185,12 +184,33 @@ body{
 		li{
 			padding-bottom: .5rem;
 		}
-
 	}
 	span {
 		font-size: 1.2rem;
 		font-weight: 200;
 	}
+	table{
+		margin-top: 1rem;
+		width: 100%;
+		text-align: center;
+		padding: 0rem .5rem;
+			border: 1px solid $color-pink;
+			background-color: white;
+		th{
+			border-bottom: 1px solid $color-pink;
+			border-top: 1px solid $color-pink;
+			text-align: left;
+			padding: .5rem;
+		}
+		td{
+			border-bottom: 1px solid $color-pink;
+			border-top: 1px solid $color-pink;
+
+			// background-color: white;
+		}
+	}
+	// table, th, td {
+	// }
 }
 .box{
 	padding: .85rem;

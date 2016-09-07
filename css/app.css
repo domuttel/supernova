@@ -390,6 +390,21 @@ body {
   .page-titles span {
     font-size: 1.2rem;
     font-weight: 200; }
+  .page-titles table {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 0rem .5rem;
+    border: 1px solid #eb008b;
+    background-color: white; }
+    .page-titles table th {
+      border-bottom: 1px solid #eb008b;
+      border-top: 1px solid #eb008b;
+      text-align: left;
+      padding: .5rem; }
+    .page-titles table td {
+      border-bottom: 1px solid #eb008b;
+      border-top: 1px solid #eb008b; }
 
 .box {
   padding: .85rem;

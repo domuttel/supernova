@@ -384,6 +384,9 @@ body {
   .page-titles h1 {
     margin-top: -2rem;
     color: #eb008b; }
+    @media screen and (max-width: 800px) {
+      .page-titles h1 {
+        background-color: rgba(255, 255, 255, 0.7); } }
   .page-titles h2 {
     color: #eb008b; }
   .page-titles ul {
@@ -463,7 +466,43 @@ body {
   width: 100%;
   height: inherit;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  display: none; }
+  .sched-containers .map-images {
+    width: 100%;
+    height: 450px;
+    padding: 0;
+    margin: 0; }
+    @media screen and (max-width: 700px) {
+      .sched-containers .map-images {
+        height: 275px; } }
+  .sched-containers img {
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%; }
+    .sched-containers img:last-child {
+      margin-right: 0; }
+  .sched-containers img:last-child {
+    margin-top: 1rem;
+    height: auto;
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .sched-containers img:last-child:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 800px) {
+      .sched-containers img:last-child {
+        margin-left: 8.5298%;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%; }
+        .sched-containers img:last-child:last-child {
+          margin-right: 0; } }
   .sched-containers .time {
     float: left;
     display: block;
@@ -494,6 +533,13 @@ body {
         width: 91.4702%; }
         .sched-containers .place:last-child {
           margin-right: 0; } }
+  .sched-containers .place-cc {
+    width: 100%;
+    height: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: #eb008b;
+    color: white; }
   .sched-containers .event {
     float: left;
     display: block;

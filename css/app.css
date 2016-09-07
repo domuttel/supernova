@@ -380,7 +380,12 @@ body {
         height: 100%; } }
 
 .page-titles {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
   width: 100%; }
+  .page-titles:last-child {
+    margin-right: 0; }
   .page-titles .profile-image {
     float: left;
     display: block;

@@ -236,8 +236,17 @@ body{
 		td{
 			border-bottom: 1px solid $color-pink;
 			border-top: 1px solid $color-pink;
-
-			// background-color: white;
+		}
+	}
+	a {
+		@include span-columns(12);
+		color: black;
+		.sponsorpage-imgs{
+			@include row;
+			margin-top: 2rem;
+			img{
+				@include span-columns(5);
+			}
 		}
 	}
 }
@@ -302,8 +311,6 @@ body{
 	height: inherit;
 	margin: 0;
 	padding: 0;
-
-
 	.year{
 		@include span-columns(2);
 		font-size: 2rem;
@@ -313,18 +320,16 @@ body{
 			@include span-columns(11);
 		}
 	}
-
 	.title{
 		@include span-columns(10);
 		font-size: 1.6rem;
 		color: $color-pink;
 		@include media(max-width 800px){
-			// @include shift(0.5);
 			@include span-columns(12);
 		}
 	}
 	.news-article{
-		@include shift(2);
+		@include shift(3);
 		@include span-columns(9);
 		margin-bottom: 1.4rem;
 		@include media(max-width 800px){
@@ -332,14 +337,13 @@ body{
 			@include span-columns(11);
 		}
 	}
-
 }
 .sched-containers {
 	width: 100%;
 	height: inherit;
 	margin: 0;
 	padding: 0;
-	// display: none;
+	display: none;
 
 	.map-images{
 		width:100%;
@@ -367,7 +371,7 @@ body{
 	.time {
 		@include span-columns(12);
 		font-family: "polya-webfont";
-		color: $color-pink;
+		color: $color-yellow;
 		font-size: 4rem;
 		font-weight: 200;
 		margin-bottom: -.7rem;

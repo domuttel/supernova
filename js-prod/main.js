@@ -8,8 +8,10 @@ $(document).ready( function() {
         $('#about-list').hide();
     });
     $('#enter-sp').on('click', function(){
-        $('#videobg').hide();
-        $(this).hide();
+        $('#videobg').animate({opacity: 0 }, 100, function(){
+            $('#enter-sp').hide();
+            $('#videobg-container').remove();
+        });
     });
     // var video = document.getElementById("videobg");
     // function enterSp(){

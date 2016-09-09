@@ -95,8 +95,7 @@ html {
     justify-content: flex-end;
     -ms-flex-pack: end;
     font-size: 1.2rem;
-    font-weight: 200;
-    color: white; }
+    font-weight: 200; }
     #nav-bar #nav-command:last-child {
       margin-right: 0; }
     #nav-bar #nav-command span {
@@ -186,7 +185,6 @@ body {
   background-image: url(../images/background/yellow-01.png); }
 
 #videobg-container video#videobg {
-  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -194,14 +192,36 @@ body {
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -100;
+  z-index: 8888;
   transform: translateX(-50%) translateY(-50%);
   background: url("../images/video/SMMC3promo.jpg") no-repeat;
   background-size: cover;
   transition: 1s opacity; }
 
 .vid-controller {
-  z-index: 9999; }
+  z-index: 9999;
+  position: fixed;
+  top: 2rem;
+  right: 2rem; }
+  .vid-controller span {
+    background: white;
+    padding: .5rem;
+    margin-left: .25rem;
+    border: 1px dotted #eb008b;
+    color: #eb008b;
+    font-size: 1.2rem;
+    transition: all 1s; }
+    @media screen and (max-width: 1200px) {
+      .vid-controller span {
+        font-size: 1rem; } }
+    @media screen and (max-width: 800px) {
+      .vid-controller span {
+        display: none; } }
+  .vid-controller span:hover, .vid-controller span:focus, .vid-controller span:active {
+    padding: .5rem;
+    color: #eb008b;
+    border: 1px dotted #eb008b;
+    background: white; }
 
 .hidden {
   display: none; }
@@ -333,12 +353,13 @@ body {
       text-align: center;
       margin-bottom: 1rem; }
     #sponsors a img {
-      width: 100%;
-      padding: .5rem;
-      margin-top: -1rem;
+      width: 90%;
+      padding: 1rem 0rem;
+      border: transparent 2px solid;
       transition: all .5s; }
     #sponsors a img:hover, #sponsors a img:focus, #sponsors a img:active {
-      padding: 0; }
+      background-color: rgba(255, 255, 255, 0.7);
+      border: yellow 2px solid; }
 
 #s-logo {
   position: fixed;
@@ -349,6 +370,65 @@ body {
   #s-logo img {
     width: 12%;
     min-width: 8rem; }
+
+#social-contact {
+  position: absolute;
+  top: 24rem;
+  z-index: 4000;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 13.84898%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+  #social-contact:last-child {
+    margin-right: 0; }
+  #social-contact #social-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 140px;
+    height: 60px; }
+    #social-contact #social-links #fb-logo {
+      margin: 5px;
+      border: 1px dotted #eb008b;
+      background-color: white;
+      background-image: url(../images/logos/social-pnk-01.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70%;
+      width: 100%;
+      height: 100%;
+      transition: all 1s; }
+    #social-contact #social-links #fb-logo:hover, #social-contact #social-links #fb-logo:active, #social-contact #social-links #fb-logo:focus {
+      background-size: 85%;
+      border-radius: 100%;
+      background-color: yellow; }
+    #social-contact #social-links #v-logo {
+      margin: 5px;
+      border: 1px dotted #eb008b;
+      background-color: white;
+      background-image: url(../images/logos/social-pnk-02.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70%;
+      width: 100%;
+      height: 100%;
+      transition: all 1s; }
+    #social-contact #social-links #v-logo:hover, #social-contact #social-links #v-logo:active, #social-contact #social-links #v-logo:focus {
+      background-size: 85%;
+      border-radius: 100%;
+      background-color: yellow; }
+  #social-contact .contact-download {
+    color: #eb008b;
+    border: 1px dotted #eb008b;
+    background-color: white;
+    padding: 1rem;
+    transition: all .5s; }
+  #social-contact .contact-download:hover, #social-contact .contact-download:active, #social-contact .contact-download:focus {
+    background-color: yellow; }
 
 .after-thing {
   margin-top: 2rem; }
@@ -640,7 +720,7 @@ body {
     margin-right: 2.35765%;
     width: 100%;
     font-family: "polya-webfont";
-    color: yellow;
+    color: #eb008b;
     font-size: 4rem;
     font-weight: 200;
     margin-bottom: -.7rem; }

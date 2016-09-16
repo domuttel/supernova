@@ -146,7 +146,7 @@ gulp.task('clean', function(){
 // build production dirrectory
 //=======================================
 gulp.task('build', ['minifyScripts', 'minifyCss', 'handle'], function(){
-    return gulp.src(['css/app.min.css', 'js/app.min.js', 'index.html', 'images/**', 'fonts/**'], { base: './' })
+    return gulp.src(['css/app.min.css', 'js/app.min.js', 'index.html', 'images/**', 'fonts/**', 'pages/**'], { base: './' })
     .pipe(gulp.dest('dist'))
 });
 

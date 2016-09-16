@@ -16,16 +16,20 @@
     <link rel="stylesheet" type="text/css" href="css/app.css" />
 </head>
 <body>
-
-<!-- NAV/SIDE +++++ FIXED -->
+    <!-- NAV/SIDE +++++ FIXED -->
     <div id="nav-bar">
         <div id="logo-banner">SUPERNOVA</div>
         <div id="blurb"><span>{{ blurb }}</span></div>
         <div id="nav-command">
             <!-- <span id="login-button">{{ login }}</span> -->
-            <span id="about-button">{{ about }}</span>
-            <span id="sched-button">{{ sched }}</span>
+            <span id="about-button">{{ about}}</span>
+            <span id="sched-button"> {{sched }}</span>
         </div>
+        <a id="hamburger-icon" href="#" title="Menu">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+        </a>
     </div>
     <div id="nav-secondary-command">
         <div id="about-list" class="nav-list">
@@ -43,209 +47,215 @@
         <div id="blurb-sub"><span>{{ blurb }}</span></div>
         <div id="page-content">
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+            <div id="loaded-content"></div>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-    <!-- HOME -->
-    <!-- <div class="sched-containers" id="home"> -->
-        <div class="page-head">
-            <div id="home-info">
-                <span>Denver Digerati will host the first ever outdoor festival of digital animation and art on September 24th at the Denver Performing Art Complex and the  14th Street LED screens at Champa and Arapahoe. Presented with support from our Galaxy Sponsors Denver Arts and Venues Next Stage NOW! / Denver Theatre District / CU Denver.  Funded in part by the Bonfils-Stanton Foundation, cultivating arts and leaders for a vibrant community. Additional support from the Biennial of the Americas, Orange Barrel Media and WeedenLaw.</span>
+<!-- HOME -->
+            <div id="home">
+            <div class="page-head">
+                <div id="home-info">
+                    <span>Denver Digerati will host the first ever outdoor festival of digital animation and art on September 24th at the Denver Performing Art Complex and the  14th Street LED screens at Champa and Arapahoe. Presented with support from our Galaxy Sponsors Denver Arts and Venues Next Stage NOW! / Denver Theatre District / CU Denver.  Funded in part by the Bonfils-Stanton Foundation, cultivating arts and leaders for a vibrant community. Additional support from the Biennial of the Americas, Orange Barrel Media and WeedenLaw.</span>
+                </div>
+            </div>
+            <div id="videosm-container">
+                <video poster="images/video/SMMC3promo.jpg" id="videosm" controls>
+                    <source src="images/video/SMMC3promo.webm" type="video/webm">
+                    <source src="images/video/SMMC3promo.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="page-titles after-thing">
+                <h2>2016 INAUGURAL FESTIVAL JURORS</h2>
+            </div>
+            <div id="the-jurors">
+                <span class="juror-img" >
+                    <img src="images/mate.png">
+                    <h3>CLAUDIA MAT&Egrave;</h3>
+                </span>
+                <span>
+                    <a class="juror-img" href="pages/jurors.html#jomo">
+                        <img src="images/monaghan.png">
+                        <h3>JONATHAN MONAGHAN</h3>
+                    </a>
+                </span>
+                <span>
+                    <a class="juror-img" href="pages/jurors.html#moal">
+                        <img src="images/allahyari.png">
+                        <h3>MOREHSHIN ALLAHYARI</h3>
+                    </a>
+                </span>
             </div>
         </div>
-        <div id="videosm-container">
-            <video poster="images/video/SMMC3promo.jpg" id="videosm" controls>
-                <source src="images/video/SMMC3promo.webm" type="video/webm">
-                    <source src="images/video/SMMC3promo.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="page-titles after-thing">
-                    <h2>2016 INAUGURAL FESTIVAL JURORS</h2>
-                </div>
-                <div id="the-jurors">
-                    <span>
-                        <a class="juror-img" href="pages/jurors.html">
-                            <img src="images/mate.png">
-                            <h3>CLAUDIA MAT&Egrave;</h3>
-                        </a>
-                    </span>
-                    <span>
-                        <a class="juror-img" href="pages/jurors.html#jomo">
-                            <img src="images/monaghan.png">
-                            <h3>JONATHAN MONAGHAN</h3>
-                        </a>
-                    </span>
-                    <span>
-                        <a class="juror-img" href="pages/jurors.html#moal">
-                            <img src="images/allahyari.png">
-                            <h3>MOREHSHIN ALLAHYARI</h3>
-                        </a>
-                    </span>
-                </div>
-            <!-- </div> -->
-    <!-- SCREEN -->
+<!-- SCREEN -->
             <div class="sched-containers" id="screenings">
-                <div class="page-titles after-thing">
-                    <h1>PUBLIC SCREENINGS</h1>
-                    <span>Free for anyone, we recommend showing up early for best spot to watch</span>
-                </div>
-                <div class="page-titles after-thing">
-                    <span class="time">4:00PM</span>
-                    <span class="place">CHAMPA LED</span>
-                    <span class="event">HISTORY OF DENVER DIGERATI</span>
-                </div>
-                <span class="about-event">Best-of Denver Digerati's five years of programming including selections from Friday Flash and our commissioned artist program. A glimpse into how and why this all started.</span>
-                <div class="page-titles">
-                    <span class="place">ARAPAHOE LED</span>
-                    <span class="event">EVERYTHING ABSTRACT</span>
-                </div>
-                <span class="about-event">Constantly moving and changing abstract digital artworks by visual pioneers from around the world.</span>
-                <div class="page-titles">
-                    <span class="time">5:00PM</span>
-                    <span class="place">CHAMPA LED</span>
-                    <span class="event">SOLO ARTIST SPOTLIGHT: JOHN BUTLER</span>
-                </div>
-                <span class="about-event">BUK based artist John butler is a pioneer of what he calls "Solid State Cinema," utilizing 3D animation, motion capture, digital audio and text to speech applications for a digital moving image form that is native to the web. His vision of a NeoFeudal age is singular and entrancing, fully propelled by by computational speed and his own sophisticated use of technology. Supernova will present 7 cohesive works from his ongoing series spanning 2004-2016.</span>
-                <div class="page-titles">
-                    <span class="place">ARAPAHOE LED</span>
-                    <span class="event">SOLO ARTIST SPOTLIGHT: ADAM FERRISS</span>
-                </div>
-                <span class="about-event">Adam Ferris proves that the cult of celebrity through entertainment, politics, leadership and religion, has never been more grotesque than it is today, in his amusing, surreal 51 minute exploration “Condensed Energy”</span>
-                <div class="page-titles">
-                    <span class="time">6:00PM</span>
-                    <span class="place">CHAMPA LED</span>
-                    <span class="event">STUDENT SHORTS and ANIMATION FOR ALL AGES</span>
-                </div>
-                <span class="about-event">“Kid Wonder” was one of Denver Digerati’s most popular programs, first presented in 2014. Animation is an art form that transcends age-barriers, commonly providing delight for audiences of all ages to enjoy, one of the greatest factors in our belief that digital animation is the perfect future of public art. Kids, teenagers, young adults, literally everyone will find works to fully appreciate and embrace in this thoughtfully curated program.</span>
-                <div class="page-titles">
-                    <span class="place">ARAPAHOE LED</span>
-                    <span class="event">LOCAL SPOTLIGHT / UCD SCREEN</span>
-                </div>
-                <span class="about-event">Supernova turns over the 14th and Arapahoe LED screen to our Galaxy Sponsor UC Denver, featuring works by the University's professors, students and others from within the local community that are working with a wide variety of digital tools and formats to bring the city fully into the digital age.</span>
-                <div class="page-titles">
-                    <span class="time">7:00PM</span>
-                    <span class="place">CHAMPA LED</span>
-                    <span class="event">DIRECTOR’S PICKS</span>
-                </div>
-                <span class="about-event">1 hour of digital animations of all variety’s, curated by Festival director Ivar Zeile through ongoing research as well as our submission portal.</span>
-                <div class="page-titles">
-                    <span class="place">ARAPAHOE LED</span>
-                    <span class="event">MACHINIMA and ART OF GAMING</span>
-                </div>
-                <span class="about-event">1 hour of works that reflect gaming culture and its ever widening influence on digital animation and art being developed today.</span>
-                <div class="page-titles">
-                    <span class="time">8:00PM</span>
-                    <span class="place">ALL SCREENS</span>
-                    <span class="event">SUPERNOVA COMPETITION SELECTIONS</span>
-                </div>
-                <span class="about-event">The core of Supernova is within the competition screening, featuring some of the most daring, exciting, awe-inspiring digital animations from around the world today. Competition selections will be shown on and inflatable screen within the Denver Performing Arts Complex Galleria, as well as simultaneously on the 14th Street LED screens at Champa and Arapahoe.  Three cash prizes will be awarded by our distinguished jurors.</span>
-                <div class="page-titles">
-                    <span class="time">9:30PM</span>
-                    <span class="place">DPAC SCREEN</span>
-                    <span class="event">THUG ENTRANCER - LIVE!</span>
-                </div>
-                <span class="about-event">The competition screening concludes with a multi-media performance by Denver’s own Thug Entrancer, featuring enhanced visuals on the inflateable screen by Milton Croissant III, former Denver Digerati commissioned artist, music juror and ongoing creative collaborator.</span>
-                <div class="page-titles">
-                    <span class="place">CHAMPA LED</span>
-                    <span class="event">MUSIC VIDEOS</span>
-                </div>
-                <span class="about-event">Music and art mix very well. Come check out some of the most stunning examples of an ongoing, wonderful, universal collaboration that just might be the most stimulating hour of the festival.</span>
-                <div class="page-titles">
-                    <span class="time">10:00PM</span>
-                    <span class="place">TBD</span>
-                    <span class="event">AWARDS, ANNOUNCMENTS, and AFTER PARTY</span>
-                </div>
-                <span class="about-event">The competition screening concludes with a multi-media performance by Denver’s own Thug Entrancer, featuring enhanced visuals on the inflateable screen by Milton Croissant III, former Denver Digerati commissioned artist, music juror and ongoing creative collaborator.</span>
-                <div class="page-titles">
-                    <span class="event-last">More to be revealed soon...</span>
-                </div>
+            <div class="page-titles after-thing">
+                <h1>PUBLIC SCREENINGS</h1>
+                <span>Free for anyone, we recommend showing up early for best spot to watch</span>
             </div>
-    <!-- EDU -->
+            <div class="page-titles after-thing">
+                <span class="time">4:00PM</span>
+                <span class="place">CHAMPA LED</span>
+                <span class="event">HISTORY OF DENVER DIGERATI</span>
+            </div>
+            <span class="about-event">Best-of Denver Digerati's five years of programming including selections from Friday Flash and our commissioned artist program. A glimpse into how and why this all started.</span>
+            <div class="page-titles">
+                <span class="place">ARAPAHOE LED</span>
+                <span class="event">EVERYTHING ABSTRACT</span>
+            </div>
+            <span class="about-event">Constantly moving and changing abstract digital artworks by visual pioneers from around the world.</span>
+            <div class="page-titles">
+                <span class="time">5:00PM</span>
+                <span class="place">CHAMPA LED</span>
+                <span class="event">SOLO ARTIST SPOTLIGHT: JOHN BUTLER</span>
+            </div>
+            <span class="about-event">BUK based artist John butler is a pioneer of what he calls "Solid State Cinema," utilizing 3D animation, motion capture, digital audio and text to speech applications for a digital moving image form that is native to the web. His vision of a NeoFeudal age is singular and entrancing, fully propelled by by computational speed and his own sophisticated use of technology. Supernova will present 7 cohesive works from his ongoing series spanning 2004-2016.</span>
+            <div class="page-titles">
+                <span class="place">ARAPAHOE LED</span>
+                <span class="event">SOLO ARTIST SPOTLIGHT: ADAM FERRISS</span>
+            </div>
+            <span class="about-event">Adam Ferris proves that the cult of celebrity through entertainment, politics, leadership and religion, has never been more grotesque than it is today, in his amusing, surreal 51 minute exploration “Condensed Energy”</span>
+            <div class="page-titles">
+                <span class="time">6:00PM</span>
+                <span class="place">CHAMPA LED</span>
+                <span class="event">STUDENT SHORTS and ANIMATION FOR ALL AGES</span>
+            </div>
+            <span class="about-event">“Kid Wonder” was one of Denver Digerati’s most popular programs, first presented in 2014. Animation is an art form that transcends age-barriers, commonly providing delight for audiences of all ages to enjoy, one of the greatest factors in our belief that digital animation is the perfect future of public art. Kids, teenagers, young adults, literally everyone will find works to fully appreciate and embrace in this thoughtfully curated program.</span>
+            <div class="page-titles">
+                <span class="place">ARAPAHOE LED</span>
+                <span class="event">LOCAL SPOTLIGHT / UCD SCREEN</span>
+            </div>
+            <span class="about-event">Supernova turns over the 14th and Arapahoe LED screen to our Galaxy Sponsor UC Denver, featuring works by the University's professors, students and others from within the local community that are working with a wide variety of digital tools and formats to bring the city fully into the digital age.</span>
+            <div class="page-titles">
+                <span class="time">7:00PM</span>
+                <span class="place">CHAMPA LED</span>
+                <span class="event">DIRECTOR’S PICKS</span>
+            </div>
+            <span class="about-event">1 hour of digital animations of all variety’s, curated by Festival director Ivar Zeile through ongoing research as well as our submission portal.</span>
+            <div class="page-titles">
+                <span class="place">ARAPAHOE LED</span>
+                <span class="event">MACHINIMA and ART OF GAMING</span>
+            </div>
+            <span class="about-event">1 hour of works that reflect gaming culture and its ever widening influence on digital animation and art being developed today.</span>
+            <div class="page-titles">
+                <span class="time">8:00PM</span>
+                <span class="place">ALL SCREENS</span>
+                <span class="event">SUPERNOVA COMPETITION SELECTIONS</span>
+            </div>
+            <span class="about-event">The core of Supernova is within the competition screening, featuring some of the most daring, exciting, awe-inspiring digital animations from around the world today. Competition selections will be shown on and inflatable screen within the Denver Performing Arts Complex Galleria, as well as simultaneously on the 14th Street LED screens at Champa and Arapahoe.  Three cash prizes will be awarded by our distinguished jurors.</span>
+            <div class="page-titles">
+                <span class="time">9:30PM</span>
+                <span class="place">DPAC SCREEN</span>
+                <span class="event">THUG ENTRANCER - LIVE!</span>
+            </div>
+            <span class="about-event">The competition screening concludes with a multi-media performance by Denver’s own Thug Entrancer, featuring enhanced visuals on the inflateable screen by Milton Croissant III, former Denver Digerati commissioned artist, music juror and ongoing creative collaborator.</span>
+            <div class="page-titles">
+                <span class="place">CHAMPA LED</span>
+                <span class="event">MUSIC VIDEOS</span>
+            </div>
+            <span class="about-event">Music and art mix very well. Come check out some of the most stunning examples of an ongoing, wonderful, universal collaboration that just might be the most stimulating hour of the festival.</span>
+            <div class="page-titles">
+                <span class="time">10:00PM</span>
+                <span class="place">TBD</span>
+                <span class="event">AWARDS, ANNOUNCMENTS, and AFTER PARTY</span>
+            </div>
+            <span class="about-event">The competition screening concludes with a multi-media performance by Denver’s own Thug Entrancer, featuring enhanced visuals on the inflateable screen by Milton Croissant III, former Denver Digerati commissioned artist, music juror and ongoing creative collaborator.</span>
+            <div class="page-titles">
+                <span class="event-last">More to be revealed soon...</span>
+            </div>
+        </div>
+<!-- EDU -->
             <div class="sched-containers" id="education">
-                <div class="page-titles after-thing">
-                    <h1>EDUCATION FORUMS</h1>
-                    <span>Located at the Commons on Champa, 1245 Champa St. Advanced registration and tickets required, register NOW!</span>
-                </div>
-                <div class="page-titles after-thing">
-                    <span class="time">9:00AM</span>
-                    <span class="place">_____</span>
-                    <span class="event">COFFEE, CROISSANTS &amp; DIGITAL ART DISPLAYS</span>
-                </div>
-                <span class="about-event">Ease into the day with morning social with digital artwork displays throughout Commons on Champa facilities state-of-the art screen displays, one view throughout day.</span>
-                <div class="page-titles after-thing">
-                    <span class="time">10:00AM</span>
-                    <span class="place">_____</span>
-                    <span class="event">HISTORY OF DENVER DIGERATI w/ IVAR ZEILE</span>
-                </div>
-                <span class="about-event">Learn about the origins and developmental history of Denver Digerati and our singular use of LED screens as vehicles for digital animation over the last five years.</span>
-                <div class="page-titles after-thing">
-                    <span class="time">11:00AM</span>
-                    <span class="place">_____</span>
-                    <span class="event">JUROR DISCUSSION No.1 - MORESHIN ALLAHYARI</span>
-                </div>
-                <span class="about-event">Lecture by invited juror and artist, presenting history of their work and tips on their primary interests and development within the industry.</span>
-                <div class="page-titles after-thing">
-                    <span class="time">12:00AM</span>
-                    <span class="place">_____</span>
-                    <span class="event">LUNCH / BREAK</span>
-                </div>
-                <span class="about-event">Step outside to explore the Denver Theatre District or stay inside to socialize and enjoy nibbles provided by TBD</span>
-                <div class="page-titles after-thing">
-                    <span class="time">1:00PM</span>
-                    <span class="place">_____</span>
-                    <span class="event">JUROR DISCUSSION No.2 - JONATHAN MONAGHAN</span>
-                </div>
-                <span class="about-event">Lecture by invited juror and artist, presenting history of their work and tips on their primary interests and development within the industry.</span>
-                <div class="page-titles after-thing">
-                    <span class="time">2:00PM</span>
-                    <span class="place">_____</span>
-                    <span class="event">PRESENT YOUR ART, GET A PROFESSIONAL CRITIQUE</span>
-                </div>
-                <span class="about-event">Artists may sign up to present their work on screen to group or individual guest jurors, limited to 5 minutes with follow-up critique. ADVANCE REGISTRATION A MUST!</span>
-                <div class="page-titles after-thing">
-                    <span class="time">3:30PM</span>
-                    <span class="place">_____</span>
-                    <span class="event">HALF HOUR BREAK</span>
-                </div>
-                <span class="about-event">With beer and wine or coffee and tea. Whatever suits your pleasure.</span>
-                <div class="page-titles after-thing">
-                    <span class="time">4:00PM</span>
-                    <span class="place">_____</span>
-                    <span class="event">JUROR DISCUSSION No.3 - CLAUDIA MATE</span>
-                </div>
-                <span class="about-event">---</span>
-                <div class="page-titles after-thing">
-                    <span class="time">5:00PM</span>
-                    <span class="place">_____</span>
-                    <span class="event">PANEL DISCUSSION WITH FESTIVAL JURORS</span>
-                </div>
-                <span class="about-event">Denver Digerati founder Ivar Zeile will lead a panel discussion with our three festival jurors to cover topics of interest relating to digital animation and new-media art.</span>
-                <div class="page-titles after-thing">
-                    <span class="time">6:00PM</span>
-                    <span class="place">_____</span>
-                    <span class="event">MOVE OUTDOORS FOR EVENING SCREENINGS</span>
-                </div>
-            </div>
-    <!-- MAP -->
+                        <div class="page-titles after-thing">
+                            <h1>EDUCATION FORUMS</h1>
+                            <span>Located at the Commons on Champa, 1245 Champa St. Advanced registration and tickets required, register NOW!</span>
+                        </div>
+                        <div class="page-titles after-thing">
+                            <span class="time">9:00AM</span>
+                            <span class="place">_____</span>
+                            <span class="event">COFFEE, CROISSANTS &amp; DIGITAL ART DISPLAYS</span>
+                        </div>
+                        <span class="about-event">Ease into the day with morning social with digital artwork displays throughout Commons on Champa facilities state-of-the art screen displays, one view throughout day.</span>
+                        <div class="page-titles after-thing">
+                            <span class="time">10:00AM</span>
+                            <span class="place">_____</span>
+                            <span class="event">HISTORY OF DENVER DIGERATI w/ IVAR ZEILE</span>
+                        </div>
+                        <span class="about-event">Learn about the origins and developmental history of Denver Digerati and our singular use of LED screens as vehicles for digital animation over the last five years.</span>
+                        <div class="page-titles after-thing">
+                            <span class="time">11:00AM</span>
+                            <span class="place">_____</span>
+                            <span class="event">JUROR DISCUSSION No.1 - MORESHIN ALLAHYARI</span>
+                        </div>
+                        <span class="about-event">Lecture by invited juror and artist, presenting history of their work and tips on their primary interests and development within the industry.</span>
+                        <div class="page-titles after-thing">
+                            <span class="time">12:00AM</span>
+                            <span class="place">_____</span>
+                            <span class="event">LUNCH / BREAK</span>
+                        </div>
+                        <span class="about-event">Step outside to explore the Denver Theatre District or stay inside to socialize and enjoy nibbles provided by TBD</span>
+                        <div class="page-titles after-thing">
+                            <span class="time">1:00PM</span>
+                            <span class="place">_____</span>
+                            <span class="event">JUROR DISCUSSION No.2 - JONATHAN MONAGHAN</span>
+                        </div>
+                        <span class="about-event">Lecture by invited juror and artist, presenting history of their work and tips on their primary interests and development within the industry.</span>
+                        <div class="page-titles after-thing">
+                            <span class="time">2:00PM</span>
+                            <span class="place">_____</span>
+                            <span class="event">PRESENT YOUR ART, GET A PROFESSIONAL CRITIQUE</span>
+                        </div>
+                        <span class="about-event">Artists may sign up to present their work on screen to group or individual guest jurors, limited to 5 minutes with follow-up critique. ADVANCE REGISTRATION A MUST!</span>
+                        <div class="page-titles after-thing">
+                            <span class="time">3:30PM</span>
+                            <span class="place">_____</span>
+                            <span class="event">HALF HOUR BREAK</span>
+                        </div>
+                        <span class="about-event">With beer and wine or coffee and tea. Whatever suits your pleasure.</span>
+                        <div class="page-titles after-thing">
+                            <span class="time">4:00PM</span>
+                            <span class="place">_____</span>
+                            <span class="event">JUROR DISCUSSION No.3 - CLAUDIA MATE</span>
+                        </div>
+                        <span class="about-event">---</span>
+                        <div class="page-titles after-thing">
+                            <span class="time">5:00PM</span>
+                            <span class="place">_____</span>
+                            <span class="event">PANEL DISCUSSION WITH FESTIVAL JURORS</span>
+                        </div>
+                        <span class="about-event">Denver Digerati founder Ivar Zeile will lead a panel discussion with our three festival jurors to cover topics of interest relating to digital animation and new-media art.</span>
+                        <div class="page-titles after-thing">
+                            <span class="time">6:00PM</span>
+                            <span class="place">_____</span>
+                            <span class="event">MOVE OUTDOORS FOR EVENING SCREENINGS</span>
+                        </div>
+                    </div>
+<!-- MAP -->
             <div class="sched-containers" id="maps">
-                <div class="page-titles after-thing">
-                    <h1>FESTIVAL LOCATIONS</h1>
-                    <div>Between 14th and Arapahoe and 14th and Champa in downtown Denver and within Denver Performing Art Center atrium</div>
-                    <div class="place-cc after-thing">STREET MAP</div>
-                    <div class="map-images">
-                        <img src="../images/street-map.png">
+                        <div class="page-titles after-thing">
+                            <h1>FESTIVAL LOCATIONS</h1>
+                            <div>Between 14th and Arapahoe and 14th and Champa in downtown Denver and within Denver Performing Art Center atrium</div>
+                            <div class="place-cc after-thing">STREET MAP</div>
+                            <div class="map-images">
+                                <img src="../images/street-map.png">
+                            </div>
+                            <div class="place-cc after-thing">COMMONS ON CHAMPA</div>
+                            <div class="map-images">
+                                <img id=".c-on-c-map" src="../images/building-map.png">
+                            </div>
+                        </div>
                     </div>
-                    <div class="place-cc after-thing">COMMONS ON CHAMPA</div>
-                    <div class="map-images">
-                        <img id=".c-on-c-map" src="../images/building-map.png">
-                    </div>
-                </div>
+            <div id="mobile-menu">
+            <div class="page-titles after-thing">
+                <h1>ABOUT</h1>
+                <div></div>
             </div>
+            <div class="page-titles after-thing">
+                <h1>SCHEDULE</h1>
+                <div></div>
+            </div>
+        </div>
         </div>
     </div>
     <div id="s-logo">
-        <a href="pages/contact.html"><img src="images/main-logo.png"></a>
+        <img src="images/main-logo.png">
     </div>
     <div id="sponsors">
         <div class="sponsor-container">
@@ -256,34 +266,112 @@
         </div>
     </div>
     <div id="social-contact">
-        <span id="social-links">
-            <div id="fb-logo"></div>
-            <div id="v-logo"></div>
-        </span>
-        <br />
+        <div class="tickets">
+            <span>EDUCATION
+                <br />FORUM
+                <br />TICKETS
+                <!-- <hr /> -->
+                <br />
+                <!-- <br /> -->
+                <a href="http://www.axs.com/events/314748/supernova-education-forum-tickets" target="_blank">
+                    <div id="tix-logo"></div>
+                </a></span>
+            </div>
+            <!-- <hr /> -->
+            <br />
+            <br />
+            <span id="social-links">
+                <a href="">
+                    <div id="v-logo"></div>
+                </a>
+                <a href="">
+                    <div id="fb-logo"></div>
+                </a>
+            </span>
+            <br />
+            <!-- <div class="">
+            CONTACT
+        </div> -->
         <div class="contact-download">
-            <span>CONTACT US</span>
+            <div id="myBtn"></div>
         </div>
         <br />
-        <div class="contact-download">
-            <span>DOWNLOAD<br /> CATALOGUE</span>
+        <br />
+        <hr />
+        <div class="">
+            2016 <br />CATALOGUE
+        </div>
+        <hr />
+        <br />
+        <div id="dl-content">
+            <a href="data/SUPERNOVA 2016.pdf" target="_blank">
+                <span id="view-pdf"></span>
+            </a>
+            <a href="data/SUPERNOVA 2016.pdf" download>
+                <span id="dl-pdf"></span>
+            </a>
         </div>
     </div>
-
+    <div class="footer">
+        <span>&copy; 2016 Denver Digerati</span>
+    </div>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">x</span>
+            <form method="post" action="demoform.asp">
+                <div>
+                    <h2>CONTACT SUPERNOVA</h2>
+                    <input type="text" name="name" id="your-name" placeholder="Username">
+                    <input type="text" name="email" id="your-email" placeholder="Password"><br />
+                    <textarea name="Text1" cols="90%" rows="5"></textarea><br />
+                    <input type="submit" data-inline="true" value="Submit">
+                </div>
+            </form>
+            <p>Some text in the Modal..</p>
+        </div>
+    </div>
 <!-- MAIN VIDEO BACKGROUND -->
-<div id="videobg-container">
-    <video poster="images/video/SMMC3promo.jpg" id="videobg" autoplay loop muted>
-        <source src="images/video/SMMC3promo.webm" type="video/webm">
-        <source src="images/video/SMMC3promo.mp4" type="video/mp4">
-    </video>
-</div>
-<div class="vid-controller">
-    <span id="enter-sp">SKIP / ENTER</span>
-</div>
+    <div id="videobg-container">
+        <video poster="images/video/SMMC3promo.jpg" id="videobg" autoplay loop muted>
+            <source src="images/video/SMMC3promo.webm" type="video/webm">
+            <source src="images/video/SMMC3promo.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="vid-controller">
+        <span id="enter-sp">ENTER</span>
+    </div>
 <!--END - MAIN VIDEO BACKGROUND -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="js-prod/main.js"></script>
     <script type="text/javascript">
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+        modal.style.zIndex = "9999";
+        // modal.css("z-index", "2000");
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+        modal.style.zIndex = "-9999";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
     // var video = document.getElementById("videobg");
     // function enterSp(){
     //     video.hide();

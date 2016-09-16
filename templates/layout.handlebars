@@ -4,7 +4,7 @@
     <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible"  content="IE=edge" />
-    <meta name="viewport"               content="width=device-width, initial-scale=1" />
+    <meta name="viewport"               content="width=device-width, user-scalable=no" />
     <meta property="fb:app_id"          content="1758387034450945" />
     <meta property="og:type"            content="website" />
     <meta property="og:url"             content="http://supernovadenver.com/" />
@@ -70,17 +70,17 @@
                     <img src="images/mate.png">
                     <h3>CLAUDIA MAT&Egrave;</h3>
                 </span>
-                <span>
-                    <a class="juror-img" href="pages/jurors.html#jomo">
+                <span class="juror-img">
+                    <!-- <a class="juror-img" href="pages/jurors.html#jomo"> -->
                         <img src="images/monaghan.png">
                         <h3>JONATHAN MONAGHAN</h3>
-                    </a>
+                    <!-- </a> -->
                 </span>
-                <span>
-                    <a class="juror-img" href="pages/jurors.html#moal">
+                <span class="juror-img">
+                    <!-- <a class="juror-img" > -->
                         <img src="images/allahyari.png">
                         <h3>MOREHSHIN ALLAHYARI</h3>
-                    </a>
+                    <!-- </a> -->
                 </span>
             </div>
         </div>
@@ -242,16 +242,62 @@
                             </div>
                         </div>
                     </div>
-            <div id="mobile-menu">
-            <div class="page-titles after-thing">
-                <h1>ABOUT</h1>
-                <div></div>
-            </div>
-            <div class="page-titles after-thing">
-                <h1>SCHEDULE</h1>
-                <div></div>
-            </div>
+            <!-- <div id="mobile-menu">
+                <div class="mobile-nav-list">
+                    <h1>ABOUT</h1>
+                    {{#each aboutmenu}}
+                    <div><span>{{this}}</span></div>
+                    {{/each}}
+                </div>
+                <div class="mobile-nav-list">
+                    <h1>SCHEDULE</h1>
+                    {{#each schedmenu}}
+                    <div><span>{{this}}</span></div>
+                    {{/each}}
+                </div>
+                <div class="mobile-tickets">
+
+                </div>
+                <div class="mobile-social">
+                    <span id="mobile-fb"></span>
+                    <span id="mobile-v"></span>
+                    <span id="mobile-e"></span>
+                </div>
+                <div class="mobile-catalogue">
+
+                </div>
+            </div> -->
         </div>
+    </div>
+    <div id="mobile-menu">
+        <h1>ABOUT</h1>
+        <div id="mobile-about-list">
+            {{#each aboutmenu}}
+            <div>{{this}}</div>
+            {{/each}}
+        </div>
+        <h1>SCHEDULE</h1>
+        <div id="mobile-sched-list">
+            {{#each schedmenu}}
+            <div>{{this}}</div>
+            {{/each}}
+        </div>
+        <a href="http://www.axs.com/events/314748/supernova-education-forum-tickets" target="_blank">
+        <div class="mobile-tickets">
+            EDUCATION FORUM TICKETS
+            <span id="mobile-tix"></span>
+        </div>
+        </a>
+        <div class="mobile-social">
+            <a href="https://www.facebook.com/DenverDigerati">
+                <span id="mobile-fb"></span>
+            </a>
+            <span id="mobile-e"></span>
+            <a href="https://www.facebook.com/DenverDigerati">
+                <span id="mobile-v"></span>
+            </a>
+        </div>
+        <div class="mobile-catalogue">
         </div>
     </div>
     <div id="s-logo">
@@ -275,23 +321,21 @@
                 <!-- <br /> -->
                 <a href="http://www.axs.com/events/314748/supernova-education-forum-tickets" target="_blank">
                     <div id="tix-logo"></div>
-                </a></span>
-            </div>
-            <!-- <hr /> -->
-            <br />
-            <br />
-            <span id="social-links">
-                <a href="">
-                    <div id="v-logo"></div>
-                </a>
-                <a href="">
-                    <div id="fb-logo"></div>
                 </a>
             </span>
-            <br />
-            <!-- <div class="">
-            CONTACT
-        </div> -->
+        </div>
+        <!-- <hr /> -->
+        <br />
+        <br />
+        <span id="social-links">
+            <a href="https://vimeo.com/denverdigerati">
+                <div id="v-logo"></div>
+            </a>
+            <a href="https://www.facebook.com/DenverDigerati">
+                <div id="fb-logo"></div>
+            </a>
+        </span>
+        <br />
         <div class="contact-download">
             <div id="myBtn"></div>
         </div>
@@ -319,16 +363,23 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">x</span>
-            <form method="post" action="demoform.asp">
-                <div>
-                    <h2>CONTACT SUPERNOVA</h2>
-                    <input type="text" name="name" id="your-name" placeholder="Username">
-                    <input type="text" name="email" id="your-email" placeholder="Password"><br />
-                    <textarea name="Text1" cols="90%" rows="5"></textarea><br />
-                    <input type="submit" data-inline="true" value="Submit">
-                </div>
+
+
+            <form id="my-form" method="post">
+                <label for="email">Email:</label>
+                <input type="email" name="_replyto" placeholder="human@earth.com" id="t-email" required>
+                <label for="email">Name:</label>
+                <input type="text" name="_replyto" placeholder="Sam Denver" id="t-name" required>
+                <label for="message">Message</label>
+                <textarea name="Message" placeholder="Hello! " id="t-message" required></textarea>
+                <!-- CONFIG -->
+                <input type="text" name="_gotcha" style="display: none;">
+                <input type="hidden" name="_subject" value="Subject">
+                <input type="hidden" name="_cc" value="">
+                <!-- /CONFIG -->
+                <input class="submit" type="submit" value="SEND">
             </form>
-            <p>Some text in the Modal..</p>
+            <!-- <p>Some text in the Modal..</p> -->
         </div>
     </div>
 <!-- MAIN VIDEO BACKGROUND -->
@@ -344,71 +395,5 @@
 <!--END - MAIN VIDEO BACKGROUND -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="js-prod/main.js"></script>
-    <script type="text/javascript">
-    var modal = document.getElementById('myModal');
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-        modal.style.zIndex = "9999";
-        // modal.css("z-index", "2000");
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-        modal.style.zIndex = "-9999";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    // var video = document.getElementById("videobg");
-    // function enterSp(){
-    //     video.hide();
-    // }
-
-    // function pauseAt(){
-    //     video.addEventListener("timeupdate", function(){
-    //         if(this.currentTime >= 29) {
-    //             this.pause();
-    //         }
-    //     });
-    // };
-    // video.autoplay = true;
-    // video.muted = true;
-    // video.autoloop = true;
-
-    // video.onloadstart = function() {
-    //     video.currentTime = 1;
-    //     video.play();
-    //     if (video.end === true){
-    //     }
-    // };
-
-    // function vidplay() {
-    //     video.loop=true;
-    //     if (video.paused) {
-    //         video.play();
-    //     } else {
-    //         video.pause();
-    //     }
-    // }
-
-    // function restart() {
-    //     video.currentTime = 1;
-    //     video.play();
-    //     pauseAt(video);
-    // }
-    </script>
 </body>
 </html>

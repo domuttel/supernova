@@ -289,7 +289,6 @@ body {
   background-image: url(../images/background/yellow-01.png); }
 
 #videobg-container video#videobg {
-  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -302,9 +301,12 @@ body {
   background: url("../images/video/SMMC3promo.jpg") no-repeat;
   background-size: cover;
   transition: 1s opacity; }
+  @media screen and (max-width: 900px) {
+    #videobg-container video#videobg {
+      display: none;
+      transition: all 1s; } }
 
 .vid-controller {
-  display: none;
   z-index: 8889;
   position: fixed;
   top: 2rem;
@@ -320,9 +322,10 @@ body {
     @media screen and (max-width: 1200px) {
       .vid-controller span {
         font-size: 1rem; } }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       .vid-controller span {
-        display: none; } }
+        display: none;
+        transition: all 1s; } }
   .vid-controller span:hover, .vid-controller span:focus, .vid-controller span:active {
     padding: .5rem;
     color: #eb008b;
@@ -988,6 +991,88 @@ body {
         .sched-containers .about-event:last-child {
           margin-right: 0; } }
 
+#mobile-menu {
+  padding-top: 7rem;
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: scroll; }
+  @media screen and (min-height: 600px) {
+    #mobile-menu {
+      height: 100%; } }
+  @media screen and (min-width: 800px) {
+    #mobile-menu {
+      display: none !important; } }
+  #mobile-menu .mobile-social {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10rem;
+    width: 100%; }
+    #mobile-menu .mobile-social a {
+      margin: auto;
+      padding: auto;
+      display: flex; }
+    #mobile-menu .mobile-social #mobile-fb {
+      background-image: url(../images/logos/social-pnk-02.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 78%;
+      background-color: white;
+      border-radius: 100%;
+      border: dotted 1px #eb008b;
+      width: 55px;
+      height: 55px;
+      transition: all 1s; }
+    #mobile-menu .mobile-social #mobile-e {
+      background-image: url(../images/logos/social-pnk-03.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70%;
+      background-color: white;
+      border-radius: 100%;
+      border: dotted 1px #eb008b;
+      width: 55px;
+      height: 55px;
+      transition: all 1s; }
+    #mobile-menu .mobile-social #mobile-v {
+      background-image: url(../images/logos/social-pnk-01.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 72%;
+      background-color: white;
+      border-radius: 100%;
+      border: dotted 1px #eb008b;
+      width: 55px;
+      height: 55px;
+      transition: all 1s; }
+  #mobile-menu .mobile-tickets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6rem;
+    width: 100%;
+    color: black;
+    background-color: yellow;
+    margin-top: 2rem; }
+    #mobile-menu .mobile-tickets #mobile-tix {
+      background-image: url(../images/logos/social-blk-06.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 72%;
+      background-color: white;
+      border-radius: 100%;
+      margin-left: 1rem;
+      border: dotted 1px black;
+      width: 80px;
+      height: 80px;
+      transition: all 1s; }
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -1111,11 +1196,5 @@ body {
     background-position: -100px -30px; }
   100% {
     background-position: 160px -60px; } }
-
-@keyframes slideDash {
-  from {
-    transform: rotate(360deg); }
-  to {
-    transform: roatate(0deg); } }
 
 /*# sourceMappingURL=../maps/main.css.map */

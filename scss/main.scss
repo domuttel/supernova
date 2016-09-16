@@ -15,7 +15,7 @@ body{
 }
 #videobg-container{
 	video#videobg {
-		display: none;
+		// display: none;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -28,6 +28,10 @@ body{
 		background: url('../images/video/SMMC3promo.jpg') no-repeat;
 		background-size: cover;
 		transition: 1s opacity;
+		@include media(max-width 900px){
+			display: none;
+			transition: all 1s;
+		}
 	}
 
 }
@@ -35,7 +39,7 @@ body{
 // Video controls   ***************
 //*********************************
 .vid-controller {
-	display: none;
+	// display: none;
 
 	z-index: 8889;
 	position: fixed;
@@ -53,8 +57,12 @@ body{
 		@include media(max-width 1200px){
 			font-size: 1rem;
 		}
-		@include media(max-width 800px){
-			display:none;
+		// @include media(max-width 800px){
+		// 	display:none;
+		// }
+		@include media(max-width 900px){
+			display: none;
+			transition: all 1s;
 		}
 	}
 	span:hover, span:focus, span:active{
@@ -64,7 +72,6 @@ body{
 		background: $color-yellow;
 	}
 }
-
 .hidden {
 	display: none;
 }
@@ -248,9 +255,7 @@ body{
 				background-image: url(../images/logos/social-wht-01.png);
 			}
 		}
-
 	}
-
 }
 .contact-download{
 	height: 3rem;
@@ -357,7 +362,6 @@ body{
 		}
 	}
 }
-
 #videosm-container {
 	width: 100%;
 	height: auto;
@@ -371,7 +375,6 @@ body{
 		}
 	}
 }
-
 .page-titles {
 	@include span-columns(12);
 	.profile-image{
@@ -450,7 +453,6 @@ body{
 		}
 	}
 }
-
 .box{
 	padding: .85rem;
 	border: .15rem solid $color-yellow;
@@ -460,7 +462,6 @@ body{
 		line-height: 1.4rem;
 	}
 }
-
 #the-jurors{
 	span{
 		@include span-columns(3.8);
@@ -537,7 +538,6 @@ body{
 		}
 	}
 }
-
 .sched-containers {
 	width: 100%;
 	height: inherit;
@@ -622,6 +622,103 @@ body{
 		}
 	}
 }
+#mobile-menu{
+	// top: 5rem;
+	padding-top: 7rem;
+	display: none;
+	position: fixed;
+	// top: -100%;
+	z-index: 3000;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	color: white;
+	background-color: rgba(0,0,0,0.8);
+	overflow: scroll;
+	@include media(min-height 600px){
+		height: 100%;
+	}
+	@include media(min-width 800px){
+		display: none !important;
+	}
+	.mobile-nav-list{
+
+	}
+	.mobile-social{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		height: 10rem;
+		width: 100%;
+		// width: 100%;
+		// height: auto;
+		a{
+			margin: auto;
+			padding: auto;
+			display: flex;
+		}
+		#mobile-fb{
+			background-image: url(../images/logos/social-pnk-02.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 78%;
+			background-color: white;
+			border-radius: 100%;
+			border: dotted 1px $color-pink;
+			width: 55px;
+			height: 55px;
+			transition: all 1s;
+		}
+		#mobile-e{
+			background-image: url(../images/logos/social-pnk-03.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 70%;
+			background-color: white;
+			border-radius: 100%;
+			border: dotted 1px $color-pink;
+			width: 55px;
+			height: 55px;
+			transition: all 1s;
+		}
+			#mobile-v{
+				background-image: url(../images/logos/social-pnk-01.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 72%;
+				background-color: white;
+				border-radius: 100%;
+				border: dotted 1px $color-pink;
+				width: 55px;
+				height: 55px;
+				transition: all 1s;
+			}
+	}
+	.mobile-tickets{
+		display: flex;
+		align-items: center;
+		justify-content: center;;
+		height: 6rem;
+		width: 100%;
+		color: black;
+		background-color: yellow;
+		margin-top: 2rem;
+		#mobile-tix{
+			background-image: url(../images/logos/social-blk-06.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 72%;
+			background-color: white;
+			border-radius: 100%;
+			margin-left: 1rem;
+			border: dotted 1px black;
+			width: 80px;
+			height: 80px;
+			transition: all 1s;
+		}
+	}
+
+}
 // #####################################
 // history images
 // #####################################
@@ -630,7 +727,6 @@ body{
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
-
 .card {
 	$base-border-color: gainsboro !default;
 	$base-border-radius: 3px !default;
@@ -759,9 +855,4 @@ body{
 	60%  { background-position: 0 -150px; }
 	80%  { background-position: -100px -30px; }
 	100% { background-position: 160px -60px; }
-}
-
-@keyframes slideDash {
-	from { transform: rotate( 360deg ); }
-	to   { transform: roatate(0deg); }
 }

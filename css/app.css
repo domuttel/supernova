@@ -43,6 +43,14 @@ html {
   height: 5rem;
   width: 100%;
   background-color: yellow; }
+  #nav-bar img {
+    margin-left: 2rem;
+    width: 65%;
+    max-width: 20rem; }
+    @media screen and (min-width: 1000px) {
+      #nav-bar img {
+        transition: all 1s;
+        display: none; } }
   #nav-bar #logo-banner {
     float: left;
     display: block;
@@ -56,6 +64,9 @@ html {
     transition: all 1s; }
     #nav-bar #logo-banner:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 1000px) {
+      #nav-bar #logo-banner {
+        display: none; } }
     @media screen and (max-width: 700px) {
       #nav-bar #logo-banner {
         font-size: 2rem; }
@@ -130,56 +141,52 @@ html {
         text-shadow: -2px 2px #eb008b; }
 
 #hamburger-icon {
-  width: 40px;
-  height: 25px;
+  width: 34px;
+  height: 18px;
   position: relative;
   z-index: 9999;
   margin-right: 2rem;
+  margin-bottom: .25rem;
   display: none; }
   @media screen and (max-width: 800px) {
     #hamburger-icon {
       display: block; } }
   #hamburger-icon .line {
     display: block;
-    background: #eb008b;
-    width: 40px;
-    height: 8px;
+    background: black;
+    width: 34px;
+    height: 5px;
     position: absolute;
     left: 0;
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s; }
     #hamburger-icon .line.line-1 {
-      box-shadow: -4px 4px white;
       top: 0; }
     #hamburger-icon .line.line-2 {
-      box-shadow: -4px 4px white;
       top: 50%; }
     #hamburger-icon .line.line-3 {
-      box-shadow: -4px 4px white;
       top: 100%; }
   #hamburger-icon:hover .line-1, #hamburger-icon:focus .line-1 {
-    transform: translateY(-4px);
-    -webkit-transform: translateY(-4px);
-    -moz-transform: translateY(-4px); }
+    transform: translateY(-2.5px);
+    -webkit-transform: translateY(-2.5px);
+    -moz-transform: translateY(-2.5px); }
   #hamburger-icon:hover .line-3, #hamburger-icon:focus .line-3 {
-    transform: translateY(4px);
-    -webkit-transform: translateY(4px);
-    -moz-transform: translateY(4px); }
+    transform: translateY(2.5px);
+    -webkit-transform: translateY(2.5px);
+    -moz-transform: translateY(2.5px); }
   #hamburger-icon.active {
     box-shadow: none; }
     #hamburger-icon.active .line-1 {
-      box-shadow: -4px 4px rgba(255, 255, 255, 0);
-      transform: translateY(12.5px) translateX(0) rotate(45deg);
-      -webkit-transform: translateY(12.5px) translateX(0) rotate(45deg);
-      -moz-transform: translateY(12.5px) translateX(0) rotate(45deg); }
+      transform: translateY(9px) translateX(0) rotate(45deg);
+      -webkit-transform: translateY(9px) translateX(0) rotate(45deg);
+      -moz-transform: translateY(9px) translateX(0) rotate(45deg); }
     #hamburger-icon.active .line-2 {
       opacity: 0; }
     #hamburger-icon.active .line-3 {
-      box-shadow: -4px 4px rgba(255, 255, 255, 0);
-      transform: translateY(-12.5px) translateX(0) rotate(-45deg);
-      -webkit-transform: translateY(-12.5px) translateX(0) rotate(-45deg);
-      -moz-transform: translateY(-12.5px) translateX(0) rotate(-45deg); }
+      transform: translateY(-9px) translateX(0) rotate(-45deg);
+      -webkit-transform: translateY(-9px) translateX(0) rotate(-45deg);
+      -moz-transform: translateY(-9px) translateX(0) rotate(-45deg); }
 
 #nav-secondary-command {
   width: 100%;
@@ -1132,6 +1139,32 @@ body {
     .card:active .card-header {
       background-color: #f6f6f6;
       font-size: 1.8rem; }
+
+.iframe-placer {
+  margin-top: 1rem;
+  margin-left: 8.5298%;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%; }
+  .iframe-placer:last-child {
+    margin-right: 0; }
+  .iframe-placer iframe {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .iframe-placer iframe:last-child {
+      margin-right: 0; }
+
+#support-vend-links a h3 {
+  font-weight: 100;
+  color: #424242;
+  text-shadow: -4px 4px yellow;
+  text-decoration: underline;
+  transition: 1s all; }
+  #support-vend-links a h3:hover, #support-vend-links a h3:active, #support-vend-links a h3:focus {
+    text-decoration: none; }
 
 .footer {
   position: fixed;

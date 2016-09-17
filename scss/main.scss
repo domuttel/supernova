@@ -405,7 +405,7 @@ body{
 	}
 	h1{
 		margin-top: -2rem;
-		color: #424242;
+		color: $color-dark;
 		text-shadow: -4px 4px yellow;
 
 	}
@@ -813,6 +813,30 @@ body{
 		.card-header {
 			background-color: $card-background;
 			font-size: 1.8rem;
+		}
+	}
+}
+.iframe-placer{
+	margin-top: 1rem;
+	@include shift(1);
+	@include span-columns(10);
+	iframe{
+		@include span-columns(12);
+	}
+}
+#support-vend-links{
+	a {
+		h3{
+
+			font-weight: 100;
+			color: $color-dark;
+			text-shadow: -4px 4px yellow;
+			text-decoration: underline;
+			transition: 1s all;
+			&:hover, &:active, &:focus {
+				text-decoration: none;
+			}
+
 		}
 	}
 }

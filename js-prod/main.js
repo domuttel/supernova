@@ -31,44 +31,6 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-// var video = document.getElementById("videobg");
-// function enterSp(){
-//     video.hide();
-// }
-
-// function pauseAt(){
-//     video.addEventListener("timeupdate", function(){
-//         if(this.currentTime >= 29) {
-//             this.pause();
-//         }
-//     });
-// };
-// video.autoplay = true;
-// video.muted = true;
-// video.autoloop = true;
-
-// video.onloadstart = function() {
-//     video.currentTime = 1;
-//     video.play();
-//     if (video.end === true){
-//     }
-// };
-
-// function vidplay() {
-//     video.loop=true;
-//     if (video.paused) {
-//         video.play();
-//     } else {
-//         video.pause();
-//     }
-// }
-
-// function restart() {
-//     video.currentTime = 1;
-//     video.play();
-//     pauseAt(video);
-// }
-
 $(document).ready( function() {
     $('#nav-command').on('click','#about-button', function(){
         $('#about-list').fadeIn();
@@ -88,47 +50,20 @@ $(document).ready( function() {
             next();
         });
     });
-
-    // $(document).scroll(function () {
-    //     var y = $(this).scrollTop();
-    //     if (y > 1) {
-    //         $('#nav-bar').animate({height: "5rem"}, 75).css("background-color", "rgba(255,255,0,0.85)");
-    //         $('#logo-banner').css("font-size", "3rem");
-    //     }
-    //     else if (y < 1) {
-    //         $('#nav-bar').animate({height: "6rem"}, 75).css("background-color", "yellow");
-    //         $('#logo-banner').css("font-size", "3.3rem");
-    //     }
-    // });
-// var jurors = $(".juror-img");
-// $('# div').on('click', function() {
-//         var index = $(this).index();
-//         if (index === 0) {
-//             screenings.load('pages/jurors.html');
-//         }
-//         else if (index === 1) {
-//             screenings.load('pages/jurors.html');
-//         }
-//         else {
-//             screenings.load('pages/jurors.html');
-//         }
-// };
-var container = $('#loaded-content');
-$('.juror-img').on('click', function() {
-    var index = $(this).index();
-    container.empty( function(){
+    var container = $('#loaded-content');
+    $('.juror-img').on('click', function() {
+        var index = $(this).index();
+        container.empty( function(){
+        });
+        container.fadeIn(1000).load('pages/jurors.html');
+        allSched.hide();
+        home.hide();
     });
-    container.fadeIn(1000).load('pages/jurors.html');
-    allSched.hide();
-    home.hide();
-});
-var screenings = $("#screenings");
+    var screenings = $("#screenings");
     var home = $("#home");
     var education = $('#education');
     var maps = $("#maps");
     var allSched = $(".sched-containers");
-
-
     $('#logo-banner').on('click', function() {
         container.empty();
         allSched.hide();
@@ -143,11 +78,8 @@ var screenings = $("#screenings");
         if (index === 0) {
             screenings.fadeIn(1000);
         }
-        else if (index === 1) {
+        else {
             education.fadeIn(1000);
-        }
-        else{
-            maps.fadeIn(1000);
         }
     });
     $('#mobile-sched-list div').on('click', function() {
@@ -155,17 +87,13 @@ var screenings = $("#screenings");
         container.empty();
         hamburger.toggleClass('active');
             $('#mobile-menu').toggle();
-        // $('.nav-list').fadeOut();
         home.hide();
         allSched.hide();
         if (index === 0) {
             screenings.fadeIn(1000);
         }
-        else if (index === 1) {
+        else {
             education.fadeIn(1000);
-        }
-        else{
-            maps.fadeIn(1000);
         }
     });
     $('#about-list div').on('click', function() {
@@ -178,18 +106,21 @@ var screenings = $("#screenings");
             container.fadeIn(1000).load('pages/festival.html');
         }
         else if (index === 1) {
-            container.fadeIn(1000).load('pages/jurors.html');
+            maps.fadeIn(1000);
         }
         else if (index === 2) {
-            container.fadeIn(1000).load('pages/the-team.html');
+            container.fadeIn(1000).load('pages/jurors.html');
         }
         else if (index === 3) {
-            container.fadeIn(1000).load('pages/history.html');
+            container.fadeIn(1000).load('pages/the-team.html');
         }
         else if (index === 4) {
-            container.fadeIn(1000).load('pages/press.html');
+            container.fadeIn(1000).load('pages/history.html');
         }
         else if (index === 5) {
+            container.fadeIn(1000).load('pages/press.html');
+        }
+        else if (index === 6) {
             container.fadeIn(1000).load('pages/sponsors.html');
         }
         else {
@@ -208,18 +139,21 @@ var screenings = $("#screenings");
             container.fadeIn(1000).load('pages/festival.html');
         }
         else if (index === 1) {
-            container.fadeIn(1000).load('pages/jurors.html');
+            maps.fadeIn(1000);
         }
         else if (index === 2) {
-            container.fadeIn(1000).load('pages/the-team.html');
+            container.fadeIn(1000).load('pages/jurors.html');
         }
         else if (index === 3) {
-            container.fadeIn(1000).load('pages/history.html');
+            container.fadeIn(1000).load('pages/the-team.html');
         }
         else if (index === 4) {
-            container.fadeIn(1000).load('pages/press.html');
+            container.fadeIn(1000).load('pages/history.html');
         }
         else if (index === 5) {
+            container.fadeIn(1000).load('pages/press.html');
+        }
+        else if (index === 6) {
             container.fadeIn(1000).load('pages/sponsors.html');
         }
         else {

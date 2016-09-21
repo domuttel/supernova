@@ -1,36 +1,3 @@
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("mobile-e");
-var btn2 = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-    modal.style.zIndex = "9999";
-    // modal.css("z-index", "2000");
-}
-btn2.onclick = function() {
-    modal.style.display = "block";
-    modal.style.zIndex = "9999";
-    // modal.css("z-index", "2000");
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-    modal.style.zIndex = "-9999";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 $(document).ready( function() {
     $('#nav-command').on('click','#about-button', function(){
         $('#about-list').fadeIn();
@@ -40,7 +7,6 @@ $(document).ready( function() {
         $('#sched-list').fadeIn();
         $('#about-list').hide();
     });
-
     $('#enter-sp').on('click', function(){
         $('.vid-controller').fadeOut(400, function(){
             $(this).remove();
@@ -160,35 +126,12 @@ $(document).ready( function() {
             container.fadeIn(1000).load('pages/guidelines.html');
         }
     });
-
-    // $('#mobile-sched-list div').on('click', function() {
-    //     var index = $(this).index();
-    //     container.empty();
-    //     home.hide();
-    //     hamburger.toggleClass('active');
-    //     $('#mobile-menu').toggle();
-    //     // allSched.hide();
-    //     if (index === 0) {
-    //         screenings.fadeIn(1000);
-    //     }
-    //     if (index === 1) {
-    //         console.log(index);
-    //         // console.log("bbb");
-    //         // $('#mobile-menu').fadeOut();
-    //         education.fadeIn(1000);
-    //     }
-    //     else{
-    //         // $('#mobile-menu').fadeOut();
-    //         maps.fadeIn(1000);
-    //     }
-    // });
     var hamburger = $('#hamburger-icon');
     var mobile = $('#mobile-menu');
     hamburger.click(function() {
         hamburger.toggleClass('active');
         mobile.toggle('slow');
         return false;
-        // mobile.animate({top: "+=100"});
     });
     var $contactForm = $('#my-form');
     $contactForm.submit(function(e) {

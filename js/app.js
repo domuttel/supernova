@@ -35,6 +35,7 @@ $(document).ready( function() {
         allSched.hide();
         home.fadeIn(1000);
     });
+    
     $('#sched-list div').on('click', function() {
         var index = $(this).index();
         container.empty();

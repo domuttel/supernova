@@ -21,8 +21,6 @@ html {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
   box-align: center;
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -30,8 +28,6 @@ html {
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
   box-pack: justify;
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
@@ -109,8 +105,6 @@ html {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -moz-box-pack: end;
     box-pack: end;
     -webkit-justify-content: flex-end;
     -moz-justify-content: flex-end;
@@ -201,8 +195,6 @@ html {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
   box-align: center;
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -210,8 +202,6 @@ html {
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
-  -webkit-box-pack: end;
-  -moz-box-pack: end;
   box-pack: end;
   -webkit-justify-content: flex-end;
   -moz-justify-content: flex-end;
@@ -243,46 +233,6 @@ html {
   #nav-secondary-command #about-list {
     margin-right: 8.5rem; }
 
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: -9999;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  text-align: center;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
-  /* Modal Content/Box */
-  /* The Close Button */ }
-  .modal .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    /* Could be more or less, depending on screen size */ }
-  .modal .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold; }
-    .modal .close:hover, .modal .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer; }
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -304,7 +254,8 @@ body {
   width: auto;
   height: auto;
   z-index: 8888;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   background: url("../images/video/SMMC3promo.jpg") no-repeat;
   background-size: cover;
   transition: 1s opacity; }
@@ -410,18 +361,12 @@ body {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
   box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
   box-direction: normal;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
-  -webkit-box-align: center;
-  -moz-box-align: center;
   box-align: center;
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -444,8 +389,6 @@ body {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-    -moz-box-align: end;
     box-align: end;
     -webkit-align-items: flex-end;
     -moz-align-items: flex-end;
@@ -453,12 +396,9 @@ body {
     -o-align-items: flex-end;
     align-items: flex-end;
     -ms-flex-align: end;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
+    -webkit-align-items: center;
+            align-items: center;
     box-orient: vertical;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
     box-direction: normal;
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
@@ -493,7 +433,9 @@ body {
   width: 10%;
   left: 1%;
   z-index: 4000;
-  flex-direction: column;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   height: auto; }
   @media screen and (max-width: 900px) {
@@ -501,10 +443,18 @@ body {
       display: none; } }
   #social-contact .tickets {
     padding: .5rem;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column; }
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
     #social-contact .tickets span {
       background-color: rgba(255, 255, 0, 0.5);
       padding: .5rem; }
@@ -525,9 +475,15 @@ body {
           background-image: url(../images/logos/social-wht-06.png);
           background-color: #eb008b; }
   #social-contact #social-links {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     height: 3rem;
     width: 100%; }
     #social-contact #social-links #fb-logo {
@@ -568,7 +524,7 @@ form {
   width: 100%; }
   form input {
     color: black;
-    font-weight: bold;
+    font-weight: 700;
     margin-top: 2rem;
     width: 49%;
     padding: .5rem; }
@@ -577,7 +533,7 @@ form {
         width: 90%;
         margin-left: 5%; } }
   form textarea {
-    font-weight: bold;
+    font-weight: 700;
     margin-top: 2rem;
     width: 100%;
     height: 10rem; }
@@ -585,9 +541,15 @@ form {
 .contact-download {
   height: 3rem;
   width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-around; }
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
   .contact-download #myBtn {
     background-image: url(../images/logos/social-pnk-03.png);
     background-repeat: no-repeat;
@@ -605,13 +567,25 @@ form {
       background-image: url(../images/logos/social-wht-03.png); }
 
 #dl-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center; }
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
   #dl-content a {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     height: 1rem;
     width: 100%;
     margin: 0;
@@ -713,7 +687,8 @@ form {
     display: block;
     margin-right: 2.35765%;
     width: 40.29137%;
-    height: auto 0;
+    height: auto;
+    width: auto;
     margin-top: 1rem;
     margin-bottom: 2rem; }
     .page-titles iframe:last-child {
@@ -786,7 +761,7 @@ form {
   .box span {
     line-height: 1.4rem; }
 
-#the-jurors span {
+#the-jurors div {
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -797,23 +772,23 @@ form {
   background-repeat: repeat;
   transition: all 1s;
   height: 100%; }
-  #the-jurors span:last-child {
+  #the-jurors div:last-child {
     margin-right: 0; }
   @media screen and (max-width: 800px) {
-    #the-jurors span {
+    #the-jurors div {
       margin-left: 12.79471%;
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 74.41059%; }
-      #the-jurors span:last-child {
+      #the-jurors div:last-child {
         margin-right: 0; } }
-  #the-jurors span img {
+  #the-jurors div img {
     opacity: 1;
     width: 100%;
     border: 1px solid #eb008b;
     transition: all .5s; }
-  #the-jurors span h3 {
+  #the-jurors div h3 {
     background-color: #eb008b;
     margin-top: -4px;
     color: yellow;
@@ -822,9 +797,9 @@ form {
     padding: .25rem;
     width: 0%;
     transition: all .5s; }
-  #the-jurors span:hover img {
+  #the-jurors div:hover img {
     opacity: 0.6; }
-  #the-jurors span:hover h3 {
+  #the-jurors div:hover h3 {
     color: white;
     text-shadow: -2px 2px black; }
 
@@ -1030,7 +1005,7 @@ form {
   text-align: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
-  overflow: scroll; }
+  overflow: hidden; }
   @media screen and (min-height: 600px) {
     #mobile-menu {
       height: 100%; } }
@@ -1038,14 +1013,22 @@ form {
     #mobile-menu {
       display: none !important; } }
   #mobile-menu .mobile-social {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     height: 10rem;
     width: 100%; }
     #mobile-menu .mobile-social a {
       margin: auto;
       padding: auto;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex; }
     #mobile-menu .mobile-social #mobile-fb {
       background-image: url(../images/logos/social-pnk-02.png);
@@ -1081,9 +1064,15 @@ form {
       height: 55px;
       transition: all 1s; }
   #mobile-menu .mobile-tickets {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 6rem;
     width: 100%;
     color: black;
@@ -1103,9 +1092,15 @@ form {
       transition: all 1s; }
 
 .cards {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .card {
   background-color: #f6f6f6;
@@ -1113,8 +1108,12 @@ form {
   border-radius: 3px;
   box-shadow: 0 2px 4px #e6e6e6;
   cursor: pointer;
-  flex-basis: 15em;
-  flex-grow: 1;
+  -webkit-flex-basis: 15em;
+      -ms-flex-preferred-size: 15em;
+          flex-basis: 15em;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   margin: 0 1em 1.5em 1em;
   position: relative;
   transition: all 0.2s ease-in-out; }
@@ -1123,8 +1122,6 @@ form {
     background-repeat: repeat;
     background-position: 0 0;
     -webkit-animation: noiseAnim 0.5s infinite linear alternate;
-    -moz-animation: noiseAnim 0.5s infinite linear alternate;
-    -o-animation: noiseAnim 0.5s infinite linear alternate;
     animation: noiseAnim 0.5s infinite linear alternate;
     height: 98%;
     height: 150px;
@@ -1141,7 +1138,7 @@ form {
     color: #eb008b;
     border-bottom: 1px solid gainsboro;
     border-radius: 3px 3px 0 0;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 1.5em;
     font-size: 1rem;
     padding: 0.5em 0.75em;
@@ -1168,25 +1165,30 @@ form {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%; }
+  width: 48.82117%; }
   .iframe-placer:last-child {
     margin-right: 0; }
+  @media screen and (max-height: 800px) {
+    .iframe-placer {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%; }
+      .iframe-placer:last-child {
+        margin-right: 0; } }
   .iframe-placer iframe {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    .iframe-placer iframe:last-child {
-      margin-right: 0; }
+    height: auto;
+    width: auto; }
 
-#support-vend-links a h3 {
-  font-weight: 100;
+#support-vend-links h3 {
+  font-weight: 200;
   color: #424242;
-  text-shadow: -4px 4px yellow;
-  text-decoration: underline;
-  transition: 1s all; }
-  #support-vend-links a h3:hover, #support-vend-links a h3:active, #support-vend-links a h3:focus {
-    text-decoration: none; }
+  text-shadow: -4px 4px yellow; }
+  #support-vend-links h3 a {
+    text-decoration: underline;
+    transition: 1s all; }
+    #support-vend-links h3 a:hover, #support-vend-links h3 a:active, #support-vend-links h3 a:focus {
+      text-decoration: none; }
 
 .footer {
   position: fixed;
@@ -1197,34 +1199,6 @@ form {
   z-index: -9990; }
 
 @-webkit-keyframes noiseAnim {
-  0% {
-    background-position: 10px 200px; }
-  20% {
-    background-position: -50px 0; }
-  40% {
-    background-position: 100px -10px; }
-  60% {
-    background-position: 0 -150px; }
-  80% {
-    background-position: -100px -30px; }
-  100% {
-    background-position: 160px -60px; } }
-
-@-moz-keyframes noiseAnim {
-  0% {
-    background-position: 10px 200px; }
-  20% {
-    background-position: -50px 0; }
-  40% {
-    background-position: 100px -10px; }
-  60% {
-    background-position: 0 -150px; }
-  80% {
-    background-position: -100px -30px; }
-  100% {
-    background-position: 160px -60px; } }
-
-@-o-keyframes noiseAnim {
   0% {
     background-position: 10px 200px; }
   20% {

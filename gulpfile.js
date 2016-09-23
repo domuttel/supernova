@@ -15,17 +15,17 @@ var gulp = require('gulp'),
     handlebars = require('gulp-compile-handlebars');
 
 // auto prefix vendors
-// var AUTOPREFIXER_BROWSERS = [
-//     'ie >= 10',
-//     'ie_mob >= 10',
-//     'ff >= 30',
-//     'chrome >= 34',
-//     'safari >= 7',
-//     'opera >= 23',
-//     'ios >= 7',
-//     'android >= 4.4',
-//     'bb >= 10'
-// ];
+var AUTOPREFIXER_BROWSERS = [
+    'ie >= 10',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
+];
 // configure jshint task
 gulp.task('jshint', function() {
   return gulp.src('js/*.js')
@@ -69,7 +69,7 @@ gulp.task('compileSass', function(){
         includePaths: bourbon,
         includePaths: neat
       }))
-	// .pipe(autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
+	.pipe(autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
     .pipe(maps.write('../maps')) // source map for debugging
     .pipe(rename('app.css'))
     .pipe(gulp.dest('css'))
@@ -92,25 +92,27 @@ var templateData = {
     schedmenu: ['SCREENINGS', 'EDUCATION'],
     sponsorlinks: [
         {url: '<a href="http://artsandvenuesdenver.com" target="_blank">',
-        img:'<img src="images/logos/sponsor-logos-02.png">'},
+        img:'<img src="images/logos/sponsor-logos-02.png" alt="Sponsor Logos">'},
         {url: '<a href="http://www.artsandvenuesdenver.com/venues/denver-performing-arts-complex/the-next-stage-unveiled" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-03.png">'},
+        img: '<img src="images/logos/sponsor-logos-03.png" alt="Sponsor Logos">'},
         {url: '<a href="http://www.denverdigerati.com" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-04.png">'},
+        img: '<img src="images/logos/sponsor-logos-04.png" alt="Sponsor Logos">'},
         {url: '<a href="http://www.denvertheatredistrict.com" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-05.png">'},
+        img: '<img src="images/logos/sponsor-logos-05.png" alt="Sponsor Logos">'},
         {url: '<a href="http://www.ucdenver.edu/schools/cam/Pages/default.aspx" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-06.png">'},
+        img: '<img src="images/logos/sponsor-logos-06.png" alt="Sponsor Logos">'},
         {url: '<a href="http://www.bonfils-stantonfoundation.org" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-07.png">'},
+        img: '<img src="images/logos/sponsor-logos-07.png" alt="Sponsor Logos">'},
         {url: '<a href="http://unclejoeshkbistro.com" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-12.png">'},
+        img: '<img src="images/logos/sponsor-logos-12.png" alt="Sponsor Logos">'},
+        {url: '<a href="http://brandedcities.com" target="_blank">',
+        img: '<img src="images/logos/sponsor-logos-13.png" alt="Sponsor Logos">'},
         {url: '<a href="http://www.orangebarrelmedia.com/" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-08.png">'},
+        img: '<img src="images/logos/sponsor-logos-08.png" alt="Sponsor Logos">'},
         {url: '<a href="http://www.biennialoftheamericas.org/" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-09.png">'},
+        img: '<img src="images/logos/sponsor-logos-09.png" alt="Sponsor Logos">'},
         {url: '<a href="http://www.weedenlaw.com/" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-10.png">'}
+        img: '<img src="images/logos/sponsor-logos-10.png" alt="Sponsor Logos">'}
     ]
 }
 gulp.task('handle', function () {

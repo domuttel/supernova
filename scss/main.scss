@@ -266,7 +266,7 @@ form{
 	width: 100%;
 	input {
 		color: black;
-		font-weight: bold;
+		font-weight: 700;
 		margin-top: 2rem;
 		width: 49%;
 		padding: .5rem;
@@ -276,7 +276,7 @@ form{
 		}
 	}
 	textarea{
-		font-weight: bold;
+		font-weight: 700;
 		margin-top: 2rem;
 
 		width: 100%;
@@ -421,7 +421,8 @@ form{
 	iframe{
 		@include shift(6);
 		@include span-columns(5);
-		height:  auto 0;
+		height:  auto;
+		width: auto;
 		margin-top: 1rem;
 		margin-bottom: 2rem;
 		@include media(max-width 800px){
@@ -489,7 +490,7 @@ form{
 	}
 }
 #the-jurors{
-	span{
+	div{
 		@include span-columns(3.8);
 		margin-top: 1rem;
 		background-color: $color-pink;
@@ -660,7 +661,7 @@ form{
 	text-align: center;
 	color: white;
 	background-color: rgba(0,0,0,0.8);
-	overflow: scroll;
+	overflow: hidden;
 	@include media(min-height 600px){
 		height: 100%;
 	}
@@ -807,7 +808,7 @@ form{
 		color: $color-pink;
 		border-bottom: $card-border;
 		border-radius: $base-border-radius $base-border-radius 0 0;
-		font-weight: bold;
+		font-weight: 700;
 		line-height: 1.5em;
 		font-size: 1rem;
 		padding: ($base-spacing / 3) ($base-spacing / 2);
@@ -845,24 +846,28 @@ form{
 .iframe-placer{
 	margin-top: 1rem;
 	@include shift(1);
-	@include span-columns(10);
+	@include span-columns(6);
+	// height: auto;
+	@include media(max-height 800px){
+		@include span-columns(10);
+	}
 	iframe{
-		@include span-columns(12);
+		height: auto;
+		width: auto;
+		// @include span-columns(12);
 	}
 }
 #support-vend-links{
-	a {
-		h3{
-
-			font-weight: 100;
-			color: $color-dark;
-			text-shadow: -4px 4px yellow;
+	h3{
+		font-weight: 200;
+		color: $color-dark;
+		text-shadow: -4px 4px yellow;
+		a {
 			text-decoration: underline;
 			transition: 1s all;
 			&:hover, &:active, &:focus {
 				text-decoration: none;
 			}
-
 		}
 	}
 }

@@ -42,22 +42,8 @@ $color-dark: #424242;
 		@include media(max-width 1000px){
 			display: none;
 		}
-		@include media(max-width 700px){
-			font-size: 2rem;
-			&:hover, &:focus, &:active{
-				// color: white;
-				color: black;
-				text-shadow: -4px 4px $color-pink;
-				// background-color: white;
-				font-size: 2.1rem;
-			}
-		}
 		&:hover, &:focus, &:active{
-			// color: white;
-			color: black;
-			text-shadow: -4px 4px $color-pink;
-			// background-color: white;
-			// font-size: 3.02rem;
+			text-shadow: -4px 4px $color-dark;
 		}
 	}
 	#blurb {
@@ -85,10 +71,8 @@ $color-dark: #424242;
 		font-size: 1.2rem;
 		font-weight: 200;
 		span{
-			// background: white;
 			padding: .5rem;
 			margin-left: .25rem;
-			// border: 2px solid transparent;
 			color: $color-pink;
 			text-shadow: -2px 2px white;
 			font-size: 1.2rem;
@@ -100,12 +84,8 @@ $color-dark: #424242;
 				display:none;
 			}
 			&:hover, &:focus, &:active{
-				// border: 2px solid white;
-				padding: .5rem;
-				color: black;
-				text-shadow: -2px 2px $color-pink;
-				// border: 1px dotted $color-pink;
-				// background: $color-pink;
+				text-shadow: -2px 2px $color-dark;
+
 			}
 		}
 	}

@@ -63,16 +63,8 @@ html {
     @media screen and (max-width: 1000px) {
       #nav-bar #logo-banner {
         display: none; } }
-    @media screen and (max-width: 700px) {
-      #nav-bar #logo-banner {
-        font-size: 2rem; }
-        #nav-bar #logo-banner:hover, #nav-bar #logo-banner:focus, #nav-bar #logo-banner:active {
-          color: black;
-          text-shadow: -4px 4px #eb008b;
-          font-size: 2.1rem; } }
     #nav-bar #logo-banner:hover, #nav-bar #logo-banner:focus, #nav-bar #logo-banner:active {
-      color: black;
-      text-shadow: -4px 4px #eb008b; }
+      text-shadow: -4px 4px #424242; }
   #nav-bar #blurb {
     margin-left: 8.5298%;
     float: left;
@@ -130,9 +122,7 @@ html {
         #nav-bar #nav-command span {
           display: none; } }
       #nav-bar #nav-command span:hover, #nav-bar #nav-command span:focus, #nav-bar #nav-command span:active {
-        padding: .5rem;
-        color: black;
-        text-shadow: -2px 2px #eb008b; }
+        text-shadow: -2px 2px #424242; }
 
 #hamburger-icon {
   width: 34px;

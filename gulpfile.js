@@ -84,7 +84,7 @@ gulp.task('minifyCss', ['compileSass'], function () {
 });
 
 var templateData = {
-    blurb: 'OUTDOOR FESTIVAL OF DIGITAL ANIMATION AND ART DOWNTOWN DENVER SATURDAY SEPTEMBER 24TH',
+    blurb: 'OUTDOOR FESTIVAL OF DIGITAL ANIMATION AND ART',
     login: 'LOGIN',
     about: 'ABOUT',
     sched: 'SCHEDULE',

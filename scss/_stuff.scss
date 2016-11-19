@@ -14,15 +14,15 @@ $color-dark: #424242;
 // NAVIGATION *********************
 //*********************************
 #nav-bar{
-	img {
-		margin-left: 2rem;
-		width: 65%;
-		max-width: 20rem;
-		@include media(min-width 1000px){
-			transition: all 1s;
-			display:none;
-		}
-	}
+	// img {
+		// margin-left: 2rem;
+		// width: 65%;
+		// max-width: 20rem;
+		// @include media(min-width 1000px){
+		// 	transition: all 1s;
+		// 	display:none;
+		// }
+	// }
 	@include position(fixed, 0 null null 0);
 	@include display(flex);
 	@include align-items(center);
@@ -33,18 +33,36 @@ $color-dark: #424242;
 	background-color: $color-yellow;
 	#logo-banner{
 		@include span-columns(3);
-		font-family: "polya-webfont";
-		font-size: 3.3rem;
-		color: $color-pink;
+		// font-family: "polya-webfont";
+		// font-size: 3.3rem;
+		// color: $color-pink;
+		// width: 100%;
+		min-width: 15rem;
+		height: inherit;
 		margin-left: 2rem;
-		text-shadow: -4px 4px white;
-		transition: all 1s;
-		@include media(max-width 1000px){
-			display: none;
-		}
+		margin-top: 3rem;
+		background-image: url(../images/banner/sn-banner-pnk-wht.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		transition: all 0.5s;
 		&:hover, &:focus, &:active{
-			text-shadow: -4px 4px $color-dark;
+			background-image: url(../images/banner/sn-banner-pnk-blk.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+
 		}
+		@include media(max-width 800px){
+			margin-top: 3.45rem;
+		}
+
+		// text-shadow: -4px 4px white;
+		// transition: all 1s;
+		// @include media(max-width 1000px){
+		// 	display: none;
+		// }
+		// &:hover, &:focus, &:active{
+		// 	text-shadow: -4px 4px $color-dark;
+		// }
 	}
 	#blurb {
 		@include shift(1);

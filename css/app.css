@@ -133,7 +133,7 @@ html {
       display: block; } }
   #hamburger-icon .line {
     display: block;
-    background: black;
+    background: #eb008b;
     width: 34px;
     height: 5px;
     position: absolute;
@@ -155,18 +155,16 @@ html {
     transform: translateY(2.5px);
     -webkit-transform: translateY(2.5px);
     -moz-transform: translateY(2.5px); }
-  #hamburger-icon.active {
-    box-shadow: none; }
-    #hamburger-icon.active .line-1 {
-      transform: translateY(9px) translateX(0) rotate(45deg);
-      -webkit-transform: translateY(9px) translateX(0) rotate(45deg);
-      -moz-transform: translateY(9px) translateX(0) rotate(45deg); }
-    #hamburger-icon.active .line-2 {
-      opacity: 0; }
-    #hamburger-icon.active .line-3 {
-      transform: translateY(-9px) translateX(0) rotate(-45deg);
-      -webkit-transform: translateY(-9px) translateX(0) rotate(-45deg);
-      -moz-transform: translateY(-9px) translateX(0) rotate(-45deg); }
+  #hamburger-icon.active .line-1 {
+    transform: translateY(9px) translateX(0) rotate(45deg);
+    -webkit-transform: translateY(9px) translateX(0) rotate(45deg);
+    -moz-transform: translateY(9px) translateX(0) rotate(45deg); }
+  #hamburger-icon.active .line-2 {
+    opacity: 0; }
+  #hamburger-icon.active .line-3 {
+    transform: translateY(-9px) translateX(0) rotate(-45deg);
+    -webkit-transform: translateY(-9px) translateX(0) rotate(-45deg);
+    -moz-transform: translateY(-9px) translateX(0) rotate(-45deg); }
 
 #nav-secondary-command {
   width: 100%;
@@ -230,51 +228,6 @@ a {
 body {
   font-family: Roboto;
   background-image: url(../images/background/yellow-01.png); }
-
-#videobg-container video#videobg {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 8888;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-  background: url("../images/video/SMMC3promo.jpg") no-repeat;
-  background-size: cover;
-  transition: 1s opacity; }
-  @media screen and (max-width: 900px) {
-    #videobg-container video#videobg {
-      display: none;
-      transition: all 1s; } }
-
-.vid-controller {
-  z-index: 8889;
-  position: fixed;
-  top: 2rem;
-  right: 2rem; }
-  .vid-controller span {
-    background: white;
-    padding: .5rem;
-    margin-left: .25rem;
-    border: 1px dotted #eb008b;
-    color: #eb008b;
-    font-size: 1.2rem;
-    transition: all 1s; }
-    @media screen and (max-width: 1200px) {
-      .vid-controller span {
-        font-size: 1rem; } }
-    @media screen and (max-width: 900px) {
-      .vid-controller span {
-        display: none;
-        transition: all 1s; } }
-  .vid-controller span:hover, .vid-controller span:focus, .vid-controller span:active {
-    padding: .5rem;
-    color: #eb008b;
-    border: 1px dotted #eb008b;
-    background: yellow; }
 
 .hidden {
   display: none; }
@@ -631,16 +584,33 @@ form {
           font-size: .9rem; } }
 
 #videosm-container {
-  width: 100%;
-  height: auto;
-  text-align: center; }
-  #videosm-container video#videosm {
-    width: 80%;
-    height: 100%; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  #videosm-container:last-child {
+    margin-right: 0; }
+  #videosm-container iframe {
+    text-align: center;
+    margin-left: 17.05961%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    height: 350px;
+    margin-top: 1rem;
+    margin-bottom: 2rem; }
+    #videosm-container iframe:last-child {
+      margin-right: 0; }
     @media screen and (max-width: 800px) {
-      #videosm-container video#videosm {
-        width: 100%;
-        height: 100%; } }
+      #videosm-container iframe {
+        margin-left: 0%;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        #videosm-container iframe:last-child {
+          margin-right: 0; } }
 
 .page-titles {
   float: left;
@@ -1001,6 +971,10 @@ form {
   @media screen and (min-width: 800px) {
     #mobile-menu {
       display: none !important; } }
+  #mobile-menu #mobile-about-list {
+    cursor: pointer; }
+  #mobile-menu #mobile-sched-list {
+    cursor: pointer; }
   #mobile-menu .mobile-social {
     display: -webkit-flex;
     display: -ms-flexbox;

@@ -109,7 +109,7 @@ $color-dark: #424242;
 	}
 }
 $background: #3d566e;
-$color: black;
+$color: $color-pink;
 
 $height-icon: 18px;
 $width-line: 34px;
@@ -171,7 +171,6 @@ $translateX: 0;
     }
   }
   &.active {
-	   box-shadow: none;
     .line-1 {
 		// box-shadow: -4px 4px rgba(255,255,255,0.0);
       transform: translateY($translateY) translateX($translateX) rotate($rotation);

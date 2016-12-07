@@ -1,10 +1,10 @@
 $(document).ready( function() {
     $('#nav-command').on('click','#about-button', function(){
-        $('#about-list').fadeIn();
+        $('#about-list').fadeToggle();
         $('#sched-list').hide();
     });
     $('#nav-command').on('click','#sched-button', function(){
-        $('#sched-list').fadeIn();
+        $('#sched-list').fadeToggle();
         $('#about-list').hide();
     });
     $('#enter-sp').on('click', function(){
@@ -30,10 +30,19 @@ $(document).ready( function() {
     var education = $('#education');
     var maps = $("#maps");
     var allSched = $(".sched-containers");
+    var hamburger = $('#hamburger-icon');
+    var mobile = $('#mobile-menu');
     $('#logo-banner').on('click', function() {
         container.empty();
         allSched.hide();
         home.fadeIn(1000);
+        // allSched.hide();
+        $('#sched-list').fadeOut();
+        $('#about-list').fadeOut();
+        $('#mobile-menu').hide();
+        container.hide().empty();
+        hamburger.removeClass('active');
+        // $('#hamburger-icon').toggleClass('active');
     });
 
     $('#sched-list div').on('click', function() {
@@ -53,7 +62,7 @@ $(document).ready( function() {
         var index = $(this).index();
         container.empty();
         hamburger.toggleClass('active');
-            $('#mobile-menu').toggle();
+        $('#mobile-menu').toggle();
         home.hide();
         allSched.hide();
         if (index === 0) {
@@ -100,7 +109,7 @@ $(document).ready( function() {
         allSched.hide();
         container.hide().empty();
         hamburger.toggleClass('active');
-            $('#mobile-menu').toggle();
+        $('#mobile-menu').toggle();
         // $('.nav-list').fadeOut();
         if (index === 0) {
             container.fadeIn(1000).load('pages/festival.html');
@@ -134,25 +143,25 @@ $(document).ready( function() {
         mobile.toggle('slow');
         return false;
     });
-    var $contactForm = $('#my-form');
-    $contactForm.submit(function(e) {
-    	e.preventDefault();
-    	$.ajax({
-    		url: '//formspree.io/ivar@plusgallery.com',
-    		method: 'POST',
-    		data: $(this).serialize(),
-    		dataType: 'json',
-    		beforeSend: function() {
-    			$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
-    		},
-    		success: function(data) {
-    			$contactForm.find('.alert--loading').hide();
-    			$contactForm.append('<div class="alert alert--success">Message sent!</div>');
-    		},
-    		error: function(err) {
-    			$contactForm.find('.alert--loading').hide();
-    			$contactForm.append('<div class="alert alert--error">Oops, there was an error.</div>');
-    		}
-    	});
-    });
+    // var $contactForm = $('#my-form');
+    // $contactForm.submit(function(e) {
+    // 	e.preventDefault();
+    // 	$.ajax({
+    // 		url: '//formspree.io/ivar@plusgallery.com',
+    // 		method: 'POST',
+    // 		data: $(this).serialize(),
+    // 		dataType: 'json',
+    // 		beforeSend: function() {
+    // 			$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+    // 		},
+    // 		success: function(data) {
+    // 			$contactForm.find('.alert--loading').hide();
+    // 			$contactForm.append('<div class="alert alert--success">Message sent!</div>');
+    // 		},
+    // 		error: function(err) {
+    // 			$contactForm.find('.alert--loading').hide();
+    // 			$contactForm.append('<div class="alert alert--error">Oops, there was an error.</div>');
+    // 		}
+    // 	});
+    // });
 });

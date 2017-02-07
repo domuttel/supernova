@@ -38,6 +38,7 @@ $color-dark: #424242;
 		// color: $color-pink;
 		// width: 100%;
 		min-width: 15rem;
+		max-width: 20rem;
 		height: inherit;
 		margin-left: 2rem;
 		margin-top: 3rem;
@@ -205,8 +206,13 @@ $translateX: 0;
 	}
 	.nav-list{
 		display: none;
-		margin-right: 1.2rem;
+		margin-right: 12px;
 		color: black;
+		transition: all 1s;
+		@include media(min-width 1200px){
+			margin-right: 22px;
+			transition: all 1s;
+		}
 		div{
 			padding: .3rem 0;
 			margin: .75rem;
@@ -225,6 +231,11 @@ $translateX: 0;
 		}
 	}
 	#about-list{
-		margin-right: 8.5rem;
+		margin-right: 110px;
+		transition: all 1s;
+		@include media(min-width 1200px){
+			margin-right: 150px;
+			transition: all 1s;
+		}
 	}
 }

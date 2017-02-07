@@ -45,6 +45,7 @@ html {
     margin-right: 2.35765%;
     width: 23.23176%;
     min-width: 15rem;
+    max-width: 20rem;
     height: inherit;
     margin-left: 2rem;
     margin-top: 3rem;
@@ -201,8 +202,13 @@ html {
       display: none; } }
   #nav-secondary-command .nav-list {
     display: none;
-    margin-right: 1.2rem;
-    color: black; }
+    margin-right: 12px;
+    color: black;
+    transition: all 1s; }
+    @media screen and (min-width: 1200px) {
+      #nav-secondary-command .nav-list {
+        margin-right: 22px;
+        transition: all 1s; } }
     #nav-secondary-command .nav-list div {
       padding: .3rem 0;
       margin: .75rem; }
@@ -215,7 +221,12 @@ html {
           border: 2px dotted #424242;
           background-color: yellow; }
   #nav-secondary-command #about-list {
-    margin-right: 8.5rem; }
+    margin-right: 110px;
+    transition: all 1s; }
+    @media screen and (min-width: 1200px) {
+      #nav-secondary-command #about-list {
+        margin-right: 150px;
+        transition: all 1s; } }
 
 * {
   box-sizing: border-box;
@@ -363,7 +374,8 @@ body {
   z-index: -5000; }
   #s-logo img {
     width: 22%;
-    min-width: 12rem; }
+    min-width: 12rem;
+    max-width: 17rem; }
 
 #social-contact {
   position: absolute;

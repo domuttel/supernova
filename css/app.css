@@ -221,11 +221,11 @@ html {
           border: 2px dotted #424242;
           background-color: yellow; }
   #nav-secondary-command #about-list {
-    margin-right: 110px;
+    margin-right: 15px;
     transition: all 1s; }
     @media screen and (min-width: 1200px) {
       #nav-secondary-command #about-list {
-        margin-right: 150px;
+        margin-right: 15px;
         transition: all 1s; } }
 
 * {
@@ -396,7 +396,10 @@ body {
     #social-contact {
       display: none; } }
   #social-contact .tickets {
-    padding: .5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #eb008b;
+    margin-left: -15px;
+    width: 150px;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -410,24 +413,20 @@ body {
         -ms-flex-direction: column;
             flex-direction: column; }
     #social-contact .tickets span {
+      text-align: center;
       background-color: rgba(255, 255, 0, 0.5);
-      padding: .5rem; }
-      #social-contact .tickets span #tix-logo {
-        background-image: url(../images/logos/social-pnk-06.png);
+      padding-top: 1rem; }
+      #social-contact .tickets span #ff-logo {
+        background-image: url(../images/filmfreewaylogo.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 88%;
-        background-color: white;
-        border-radius: 100%;
-        border: dotted 1px #eb008b;
-        width: 75px;
-        height: 75px;
-        transition: all 1s;
-        margin-left: 7%; }
-        #social-contact .tickets span #tix-logo:hover, #social-contact .tickets span #tix-logo:active, #social-contact .tickets span #tix-logo:focus {
+        width: 150px;
+        height: 50px;
+        transition: all 1s; }
+        #social-contact .tickets span #ff-logo:hover, #social-contact .tickets span #ff-logo:active, #social-contact .tickets span #ff-logo:focus {
           background-size: 110%;
-          background-image: url(../images/logos/social-wht-06.png);
-          background-color: #eb008b; }
+          background-image: url(../images/filmfreewaylogo.png); }
   #social-contact #social-links {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -594,6 +593,33 @@ form {
       @media screen and (max-width: 800px) {
         .page-head #home-info span {
           font-size: .9rem; } }
+
+#main-img-container {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  #main-img-container:last-child {
+    margin-right: 0; }
+  #main-img-container img {
+    width: 100%;
+    height: auto;
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%; }
+    #main-img-container img:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 800px) {
+      #main-img-container img {
+        margin-left: 0%;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        #main-img-container img:last-child {
+          margin-right: 0; } }
 
 #videosm-container {
   float: left;
@@ -1054,15 +1080,12 @@ form {
     background-color: yellow;
     margin-top: 2rem; }
     #mobile-menu .mobile-tickets #mobile-tix {
-      background-image: url(../images/logos/social-blk-06.png);
+      background-image: url(../images/filmfreewaylogo.png);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 72%;
-      background-color: white;
-      border-radius: 100%;
+      background-size: 100%;
       margin-left: 1rem;
-      border: dotted 1px black;
-      width: 80px;
+      width: 200px;
       height: 80px;
       transition: all 1s; }
 

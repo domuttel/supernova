@@ -17,14 +17,14 @@ $(document).ready( function() {
         });
     });
     var container = $('#loaded-content');
-    $('.juror-img').on('click', function() {
-        var index = $(this).index();
-        container.empty( function(){
-        });
-        container.fadeIn(1000).load('pages/jurors.html');
-        allSched.hide();
-        home.hide();
-    });
+    // $('.juror-img').on('click', function() {
+    //     var index = $(this).index();
+    //     container.empty( function(){
+    //     });
+    //     container.fadeIn(1000).load('pages/jurors.html');
+    //     allSched.hide();
+    //     home.hide();
+    // });
     var screenings = $("#screenings");
     var home = $("#home");
     var education = $('#education');

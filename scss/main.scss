@@ -183,35 +183,59 @@ body {
 	}
 	// display: flex;
 	.tickets{
-		// background-color: rgba(255,255,255,.5);
-		// border: 2px solid $color-pink;
-		padding: .5rem;
+		background-color: rgba(255,255,255,.5);
+		border: 2px solid $color-pink;
+		margin-left: -15px;
+		// padding-left: .5rem;
+		width: 150px;
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
 		flex-direction: column;
 		span{
+			text-align: center;
 			background-color: $color-yellow-trans;
-			padding: .5rem;
-			#tix-logo{
-				background-image: url(../images/logos/social-pnk-06.png);
+			padding-top: 1rem;
+			// height: 50px;
+			#ff-logo{
+
+				background-image: url(../images/filmfreewaylogo.png);
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: 88%;
-				background-color: white;
-				border-radius: 100%;
-				border: dotted 1px $color-pink;
-				width: 75px;
-				height: 75px;
+				// background-color: white;
+				// border-radius: 100%;
+				// border: dotted 1px $color-pink;
+				width: 150px;
+				height: 50px;
 				transition: all 1s;
-				margin-left: 7%;
+				// margin-left: 7%;
 				// animation: slideDash 10s infinite linear;
 				&:hover, &:active, &:focus{
 					background-size: 110%;
-					background-image: url(../images/logos/social-wht-06.png);
-					background-color: $color-pink;
+					background-image: url(../images/filmfreewaylogo.png);
+					// background-color: $color-pink;
 				}
 			}
+			// #tix-logo{
+			// 	background-image: url(../images/logos/social-pnk-06.png);
+			// 	background-repeat: no-repeat;
+			// 	background-position: center;
+			// 	background-size: 88%;
+			// 	background-color: white;
+			// 	border-radius: 100%;
+			// 	border: dotted 1px $color-pink;
+			// 	width: 75px;
+			// 	height: 75px;
+			// 	transition: all 1s;
+			// 	margin-left: 7%;
+			// 	// animation: slideDash 10s infinite linear;
+			// 	&:hover, &:active, &:focus{
+			// 		background-size: 110%;
+			// 		background-image: url(../images/logos/social-wht-06.png);
+			// 		background-color: $color-pink;
+			// 	}
+			// }
 		}
 	}
 	#social-links{
@@ -388,6 +412,19 @@ form{
 		}
 	}
 }
+#main-img-container {
+	@include span-columns(12);
+	img{
+		width: 100%;
+		height: auto;
+		@include shift(1);
+		@include span-columns(10);
+		@include media(max-width 800px){
+			@include shift(0);
+			@include span-columns(12);
+		}
+	}
+}
 #videosm-container {
 	@include span-columns(12);
 	iframe{
@@ -402,14 +439,6 @@ form{
 			@include span-columns(12);
 		}
 	}
-	// video#videosm{
-	// 	width: 80%;
-	// 	height: 100%;
-	// 	@include media(max-width 800px){
-	// 		width: 100%;
-	// 		height:100%;
-	// 	}
-	// }
 }
 .page-titles {
 	@include span-columns(12);
@@ -737,22 +766,22 @@ form{
 	.mobile-tickets{
 		display: flex;
 		align-items: center;
-		justify-content: center;;
+		justify-content: center;
 		height: 6rem;
 		width: 100%;
 		color: black;
 		background-color: yellow;
 		margin-top: 2rem;
 		#mobile-tix{
-			background-image: url(../images/logos/social-blk-06.png);
+			background-image: url(../images/filmfreewaylogo.png);
 			background-repeat: no-repeat;
 			background-position: center;
-			background-size: 72%;
-			background-color: white;
-			border-radius: 100%;
+			background-size: 100%;
+			// background-color: white;
+			// border-radius: 100%;
 			margin-left: 1rem;
-			border: dotted 1px black;
-			width: 80px;
+			// border: dotted 1px black;
+			width: 200px;
 			height: 80px;
 			transition: all 1s;
 		}

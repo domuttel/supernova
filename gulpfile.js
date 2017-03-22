@@ -99,20 +99,20 @@ var templateData = {
         img: '<img src="images/logos/sponsor-logos-04.png" alt="Sponsor Logos">'},
         {url: '<a href="http://www.denvertheatredistrict.com" target="_blank">',
         img: '<img src="images/logos/sponsor-logos-05.png" alt="Sponsor Logos">'},
-        {url: '<a href="http://www.ucdenver.edu/schools/cam/Pages/default.aspx" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-06.png" alt="Sponsor Logos">'},
-        {url: '<a href="http://www.bonfils-stantonfoundation.org" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-07.png" alt="Sponsor Logos">'},
-        {url: '<a href="http://unclejoeshkbistro.com" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-12.png" alt="Sponsor Logos">'},
+        // {url: '<a href="http://www.ucdenver.edu/schools/cam/Pages/default.aspx" target="_blank">',
+        // img: '<img src="images/logos/sponsor-logos-06.png" alt="Sponsor Logos">'},
+        // {url: '<a href="http://www.bonfils-stantonfoundation.org" target="_blank">',
+        // img: '<img src="images/logos/sponsor-logos-07.png" alt="Sponsor Logos">'},
+        // {url: '<a href="http://unclejoeshkbistro.com" target="_blank">',
+        // img: '<img src="images/logos/sponsor-logos-12.png" alt="Sponsor Logos">'},
         {url: '<a href="http://brandedcities.com" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-13.png" alt="Sponsor Logos">'},
-        {url: '<a href="http://www.orangebarrelmedia.com/" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-08.png" alt="Sponsor Logos">'},
-        {url: '<a href="http://www.biennialoftheamericas.org/" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-09.png" alt="Sponsor Logos">'},
-        {url: '<a href="http://www.weedenlaw.com/" target="_blank">',
-        img: '<img src="images/logos/sponsor-logos-10.png" alt="Sponsor Logos">'}
+        img: '<img src="images/logos/sponsor-logos-13.png" alt="Sponsor Logos">'}
+        // {url: '<a href="http://www.orangebarrelmedia.com/" target="_blank">',
+        // img: '<img src="images/logos/sponsor-logos-08.png" alt="Sponsor Logos">'},
+        // {url: '<a href="http://www.biennialoftheamericas.org/" target="_blank">',
+        // img: '<img src="images/logos/sponsor-logos-09.png" alt="Sponsor Logos">'},
+        // {url: '<a href="http://www.weedenlaw.com/" target="_blank">',
+        // img: '<img src="images/logos/sponsor-logos-10.png" alt="Sponsor Logos">'}
     ]
 }
 gulp.task('handle', function () {

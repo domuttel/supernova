@@ -231,10 +231,12 @@ $translateX: 0;
 		}
 	}
 	#about-list{
-		margin-right: 110px;
+		margin-right: 15px;
+		// Below is for when schedule is engaged
+		// margin-right: 110px;
 		transition: all 1s;
 		@include media(min-width 1200px){
-			margin-right: 150px;
+			margin-right: 15px;
 			transition: all 1s;
 		}
 	}
